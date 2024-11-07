@@ -2,9 +2,16 @@
  * 1
  */
 
-package org.example;
+package org.example.model;
 
-public class Equipment {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
+public class Product {
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
     private String description;
@@ -13,13 +20,17 @@ public class Equipment {
     private Faculties faculty;
 
 
-    public Equipment(int id, String name, String description, int price, int quantity, Faculties faculty) {
+    public Product(int id, String name, String description, int price, int quantity, Faculties faculty) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
         this.faculty = faculty;
+    }
+
+    public Product() {
+
     }
 
     public int getId() {

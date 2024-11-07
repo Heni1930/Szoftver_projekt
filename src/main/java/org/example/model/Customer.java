@@ -1,20 +1,32 @@
 
 
-package org.example;
+package org.example.model;
 
-public class Person {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+
+
+@Entity
+public class Customer {
+    @Id
+    @GeneratedValue
+    private int Id;
     private String username;
     private String password;
-    private int neptunId;
     private String name;
     private Faculties faculty;
 
-    public Person(String username, String password, int neptunId, String name, Faculties faculty) {
+    public Customer(String username, String password, int id, String name, Faculties faculty) {
         this.username = username;
         this.password = password;
-        this.neptunId = neptunId;
+        this.Id = id;
         this.name = name;
         this.faculty = faculty;
+    }
+
+    public Customer() {
+
     }
 
 
@@ -34,12 +46,12 @@ public class Person {
         this.password = password;
     }
 
-    public int getNeptunId() {
-        return neptunId;
+    public int getId() {
+        return Id;
     }
 
-    public void setNeptunId(int neptunId) {
-        this.neptunId = neptunId;
+    public void setId(int Id) {
+        this.Id = Id;
     }
 
     public String getName() {
