@@ -4,19 +4,33 @@
 
 package org.example.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue
     private int id;
+    @NotBlank(message = "Product name cannot be empty!")
+    @Column(nullable = false)
     private String name;
+    @NotBlank(message = "Product description cannot be empty!")
+    @Column(nullable = false)
     private String description;
+    @NotBlank(message = "Product price cannot be empty!")
+    @Column(nullable = false)
+    @Min(value = 0, message = "The value must be positive!")
     private int price;
+    @NotBlank(message = "Product quantity cannot be empty!")
+    @Min(value = 0, message = "The value must be positive!")
+    @Column(nullable = false)
     private int quantity;
+    @NotBlank(message = "Faculty must be specified!")
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Faculties faculty;
 
 
@@ -32,6 +46,7 @@ public class Product {
     public Product() {
 
     }
+
 
     public int getId() {
         return id;
