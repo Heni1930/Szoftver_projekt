@@ -4,6 +4,8 @@ module org.example {
     requires jakarta.persistence;
     requires jakarta.validation;
     requires spring.data.commons;
+    requires static lombok;
+    requires com.h2database;
 
     opens org.example to javafx.fxml;
     exports org.example;

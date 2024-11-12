@@ -4,85 +4,41 @@
 
 package org.example.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.util.Date;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Entity
-@Table(name = "rentals")
+@Table
 public class Rental {
     @Id
-    @GeneratedValue
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private long id;
     @NotNull(message = "User ID cannot be null!")
-    private int userId;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private Customer userId;
     @NotNull(message = "product ID cannot be null!")
-    private int productId;
+    @ManyToOne
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product productId;
     @NotNull(message = "Rental date cannot be null!")
     @FutureOrPresent
+    @Column(name = "rental_date")
     private Date rentalDate;
     @Future
+    @Column(name = "return_date")
     private Date returnDate;
-
-    public Rental(int id, int userId, int productId, Date rentalDate, Date returnDate) {
-        this.id = id;
-        this.userId = userId;
-        this.productId = productId;
-        this.rentalDate = rentalDate;
-        this.returnDate = returnDate;
-    }
-
-    public Rental() {
-
-    }
-
-    @NotNull(message = "User ID cannot be null!")
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(@NotNull(message = "User ID cannot be null!") int userId) {
-        this.userId = userId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public @NotNull(message = "Rental date cannot be null!") @FutureOrPresent Date getRentalDate() {
-        return rentalDate;
-    }
-
-    public void setRentalDate(@NotNull(message = "Rental date cannot be null!") @FutureOrPresent Date rentalDate) {
-        this.rentalDate = rentalDate;
-    }
-
-    @NotNull(message = "product ID cannot be null!")
-    public int getProductId() {
-        return productId;
-    }
-
-    public void setProductId(@NotNull(message = "product ID cannot be null!") int productId) {
-        this.productId = productId;
-    }
-
-    public @Future Date getReturnDate() {
-        return returnDate;
-    }
-
-    public void setReturnDate(@Future Date returnDate) {
-        this.returnDate = returnDate;
-    }
 
 
 
