@@ -17,7 +17,7 @@ import java.util.List;
 @ToString(exclude = {"rentals"})
 @EqualsAndHashCode
 @Entity
-@Table(name = "products",schema = "ProjektDB")
+@Table
 public class Product {
     @Id
     @GeneratedValue

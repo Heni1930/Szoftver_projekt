@@ -16,7 +16,7 @@ import java.util.List;
 @ToString(exclude = {"rentals"})
 @EqualsAndHashCode
 @Entity
-@Table(name = "customers")
+@Table
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,6 +44,15 @@ public class Customer {
 
     @OneToMany(mappedBy = "customers", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Rental> rentals;
+
+
+    public Customer(String username, String password, String name, String email, Faculties faculty) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.faculty = faculty;
+    }
 }
 
 
