@@ -9,12 +9,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="443.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
+<AnchorPane prefHeight="423.0" prefWidth="339.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
    <children>
-      <GridPane layoutX="33.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="220.0">
+      <GridPane layoutX="99.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="220.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="560.7999267578125" minWidth="10.0" prefWidth="319.2" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="521.6000244140624" minWidth="0.0" prefWidth="0.0" />
@@ -74,6 +79,28 @@
             </Button>
          </children>
       </GridPane>
-      <Label layoutX="33.0" layoutY="35.0" text="Sign Up" />
+      <Label layoutX="99.0" layoutY="23.0" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Pane layoutX="-10.0" prefHeight="430.0" prefWidth="105.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="462.0" stroke="#ffffff00" strokeType="INSIDE" width="93.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.08235294371843338" green="0.3176470696926117" blue="0.25882354378700256" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3128654956817627" green="0.7576997876167297" blue="0.7894737124443054" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
    </children>
 </AnchorPane>
