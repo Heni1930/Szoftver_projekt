@@ -77,8 +77,8 @@
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="524.7999877929688" minWidth="10.0" prefWidth="278.00001220703126" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.7999786376953" minWidth="10.0" prefWidth="287.4000244140625" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="486.2000427246094" minWidth="10.0" prefWidth="290.99995117187507" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.5999999999999" minWidth="10.0" prefWidth="291.4000244140625" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.80001220703116" minWidth="0.0" prefWidth="40.19997558593741" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.79999999999995" minWidth="10.0" prefWidth="332.79999999999995" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.80001220703116" minWidth="0.0" prefWidth="0.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="333.59996337890624" minHeight="10.0" prefHeight="292.8000122070313" vgrow="SOMETIMES" />
@@ -157,7 +157,7 @@
                   </Pane>
                </children>
                <GridPane.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  <Insets bottom="20.0" left="40.0" right="20.0" top="20.0" />
                </GridPane.margin>
             </AnchorPane>
             <AnchorPane prefHeight="261.0" prefWidth="278.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1">
@@ -382,7 +382,7 @@
                   </Pane>
                </children>
                <GridPane.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  <Insets bottom="20.0" left="20.0" right="60.0" top="20.0" />
                </GridPane.margin>
             </AnchorPane>
          </children>
