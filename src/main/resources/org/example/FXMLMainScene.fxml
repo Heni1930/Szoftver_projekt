@@ -11,6 +11,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -32,8 +35,29 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Circle fill="#3c7294" layoutX="53.0" layoutY="37.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="10.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#216986" height="144.0" layoutX="-1.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="1189.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="67.0" />
+      <Circle fill="#155142" layoutX="53.0" layoutY="37.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="10.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="-1.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="1189.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="67.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.08235294371843338" green="0.3176470696926117" blue="0.25882354378700256" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.15945573318451897">
+                     <color>
+                        <Color red="0.08235294371843338" green="0.3176470696926117" blue="0.25882354378700256" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.4990253448486328" green="0.8421052694320679" blue="0.7563352584838867" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
       <Text fill="WHITE" layoutX="53.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renting out university essentials " AnchorPane.bottomAnchor="640.96875" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="673.953125" AnchorPane.topAnchor="117.46875">
          <font>
             <Font size="32.0" />
@@ -104,7 +128,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #216986;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -179,7 +203,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #216986;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -254,7 +278,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #216986;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -329,7 +353,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #216986;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
