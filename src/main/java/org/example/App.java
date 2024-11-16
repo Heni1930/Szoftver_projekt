@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.h2.tools.Server;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * JavaFX  App
@@ -31,8 +33,18 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
-    public static void main(String[] args) {
+    private static void startDatabase() throws SQLException {
+        new Server().runTool("-tcp", "-web", "-ifNotExists");
+    }
+
+    public static void main(String[] args) throws SQLException {
+        startDatabase();
         launch();
+
+
+        //CustomerUtils cUtils = new CustomerUtils(new JPACustomerDAO());
+        //cUtils.runUtils();
+
     }
 
 
