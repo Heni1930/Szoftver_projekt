@@ -36,7 +36,7 @@
          </font>
       </Text>
       <Circle fill="#155142" layoutX="53.0" layoutY="37.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="10.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="-1.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="1189.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="67.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="-1.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1197.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="67.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
