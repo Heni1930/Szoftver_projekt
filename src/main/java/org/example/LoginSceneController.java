@@ -24,4 +24,8 @@ public class LoginSceneController {
         System.out.println("Usename: " + LoginUsername);
         System.out.println("Password: " + LoginPassword);
     }
+
+    public void SignupButton(ActionEvent actionEvent) {
+
+    }
 }
