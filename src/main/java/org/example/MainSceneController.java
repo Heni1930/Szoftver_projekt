@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 
 
 public class MainSceneController {
+
+    //Login and Sign Up Button
     @FXML
     void LoginButton(ActionEvent event) {
 
