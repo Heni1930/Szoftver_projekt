@@ -1,12 +1,12 @@
 package org.example;
 
-import jakarta.persistence.*;
-import org.example.model.Customer;
+//import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.util.List;
 
 public class JPACustomerDAO implements CustomerDAO {
-    final EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.ProjektDB");
+    final EntityManagerFactory emf = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
     final EntityManager em = emf.createEntityManager();
 
     @Override

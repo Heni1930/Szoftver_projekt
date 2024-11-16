@@ -38,17 +38,13 @@ public class App extends Application {
     }
 
     public static void main(String[] args) throws SQLException {
-        try {
-            startDatabase();
-            launch();
+        startDatabase();
+        launch();
 
 
-            CustomerUtils cUtils = new CustomerUtils(new JPACustomerDAO());
-            cUtils.runUtils();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        //CustomerUtils cUtils = new CustomerUtils(new JPACustomerDAO());
+        //cUtils.runUtils();
+
     }
 
 }

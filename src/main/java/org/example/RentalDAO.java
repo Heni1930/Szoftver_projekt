@@ -1,7 +1,5 @@
 package org.example;
 
-import org.example.model.Rental;
-
 import java.util.List;
 
 public interface RentalDAO {

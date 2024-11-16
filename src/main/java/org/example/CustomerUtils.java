@@ -1,8 +1,5 @@
 package org.example;
 
-import org.example.model.Customer;
-import org.example.model.Faculties;
-
 public class CustomerUtils {
     private CustomerDAO cDAO;
     public CustomerUtils(CustomerDAO cDAO) {
