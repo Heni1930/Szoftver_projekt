@@ -66,6 +66,8 @@ public class SignUpSceneController {
 
     }
 
+    public void LoginButton(ActionEvent actionEvent) {
+    }
 }
 
 
