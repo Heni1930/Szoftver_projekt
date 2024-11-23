@@ -1,18 +1,24 @@
 package org.example;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
-import javax.swing.*;
+import java.io.IOException;
 
 public class SignUpSceneController {
+
 
     @FXML
     private TextField EmailAdressTextField;
@@ -41,7 +47,8 @@ public class SignUpSceneController {
         faculty.setItems(facultyList);
     }
 
-    public void signUp(ActionEvent actionEvent){
+    public Customer signUp(ActionEvent actionEvent){
+
 
         String EmailAddress = EmailAdressTextField.getText();
         String Name = NameTextField.getText();
@@ -51,22 +58,29 @@ public class SignUpSceneController {
         String Faculty = faculty.getValue().toString();
         if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty() || Faculty.isEmpty()) {
             System.out.println("Minden mezőt ki kell tölteni!"); //Üzenetkiíró részt csinálni !!!
-            return;
+            return null;
         }
-        else{
-            //fejlesztés alatt
+        else
+        {
+            Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculties.valueOf(Faculty));
+            //CustomerUtils.saveCustomer(customer);
+            return customer;
         }
-
-        //Még egyenlőre kiíratva
-        System.out.println("Email: " + EmailAddress);
-        System.out.println("Név: " + Surname + " " + Name);
-        System.out.println("Felhasználónév: " + Username);
-        System.out.println("Jelszó: " + Psswrd);
-        System.out.println("Kar: " + Faculty);
 
     }
-
     public void LoginButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
+            Parent root = loader.load();
+            Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene signUpScene = new Scene(root);
+            currentStage.setScene(signUpScene);
+            currentStage.setTitle("Login");
+            currentStage.centerOnScreen();
+            currentStage.setResizable(false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

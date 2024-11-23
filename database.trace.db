@@ -24,3 +24,6 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
 	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
 	... 20 more
+2024-11-20 22:17:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COSTUMER" not found; SQL statement:
+select * from costumer [42102-199]
