@@ -19,7 +19,6 @@ import java.io.IOException;
 
 public class SignUpSceneController {
 
-
     @FXML
     private TextField EmailAdressTextField;
 
