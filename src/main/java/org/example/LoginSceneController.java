@@ -26,6 +26,6 @@ public class LoginSceneController {
     }
 
     public void SignupButton(ActionEvent actionEvent) {
-
+        //fejlesztés alatt
     }
 }
