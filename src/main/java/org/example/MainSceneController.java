@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,19 +15,24 @@ import java.io.IOException;
 
 public class MainSceneController {
 
-    //Login and Sign Up Button
+    @FXML
+    private StackPane rootPane;
+
     @FXML
     void LoginButton(ActionEvent event) {
-
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("Login");
-            stage.show();
-        } catch (IOException e) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
+            Parent root = loader.load();
+            Stage loginStage = new Stage();
+            loginStage.setTitle("Login");
+            loginStage.setScene(new Scene(root));
+            loginStage.initModality(Modality.APPLICATION_MODAL);
+            loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
+            loginStage.setResizable(false);
+            loginStage.showAndWait();
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
@@ -34,14 +41,36 @@ public class MainSceneController {
     void SignupButton(ActionEvent event) {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLSignUpScene.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("Sign Up");
-            stage.show();
-        } catch (IOException e) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSignUpScene.fxml"));
+            Parent root = loader.load();
+            Stage loginStage = new Stage();
+            loginStage.setTitle("Sign Up");
+            loginStage.setScene(new Scene(root));
+            loginStage.initModality(Modality.APPLICATION_MODAL);
+            loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
+            loginStage.setResizable(false);
+            loginStage.showAndWait();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void rentButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLRentScene.fxml"));
+            Parent root = loader.load();
+            Stage loginStage = new Stage();
+            loginStage.setTitle("Rental");
+            loginStage.setScene(new Scene(root));
+            loginStage.initModality(Modality.APPLICATION_MODAL);
+            loginStage.initOwner(((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()));
+            loginStage.setResizable(false);
+            loginStage.showAndWait();
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
