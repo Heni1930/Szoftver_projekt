@@ -28,8 +28,8 @@ public class LoginSceneController {
         String LoginUsername = LoginUsernamefield.getText();
         String LoginPassword = LoginPasswordField.getText();
 
-        System.out.println("Usename: " + LoginUsername);
-        System.out.println("Password: " + LoginPassword);
+        //System.out.println("Usename: " + LoginUsername);
+        //System.out.println("Password: " + LoginPassword);
     }
 
     public void SignupButton(ActionEvent actionEvent) {
