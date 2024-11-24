@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-    <AnchorPane prefHeight="270.0" prefWidth="337.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoginSceneController">
+<AnchorPane prefHeight="270.0" prefWidth="337.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoginSceneController">
         <children>
             <GridPane layoutX="37.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="261.0">
                 <columnConstraints>
@@ -39,7 +39,7 @@
                     </Button>
                 </children>
             </GridPane>
-            <Pane layoutX="-1.0" layoutY="-21.0" prefHeight="72.0" prefWidth="338.0" style="-fx-background-color: teal;">
+            <Pane layoutX="-1.0" layoutY="-21.0" prefHeight="72.0" prefWidth="338.0" style="-fx-background-color: #1a3537;">
                 <children>
                     <Label layoutX="39.0" layoutY="31.0" text="Login" textFill="WHITE">
                         <font>
@@ -49,6 +49,6 @@
                 </children>
             </Pane>
             <Text layoutX="60.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you are not yet signed up sing up here" />
-            <Button layoutX="142.0" layoutY="240.0" mnemonicParsing="false" onAction="#SignupButton" style="-fx-background-color: white;" text="Sign Up" textFill="#225b54" />
+            <Button layoutX="142.0" layoutY="240.0" mnemonicParsing="false" onAction="#SignupButton" style="-fx-background-color: white;" text="Sign Up" textFill="#1a3537" />
         </children>
     </AnchorPane>

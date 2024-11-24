@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -15,6 +17,25 @@ import java.io.IOException;
 
 
 public class MainSceneController {
+
+
+    @FXML
+    private Button InformaticsBTN;
+
+    @FXML
+    private Button MedicineBTN;
+
+    @FXML
+    private Pane informaticsPane;
+
+    @FXML
+    private Pane medicinePane;
+
+    @FXML
+    private Button musicBTN;
+
+    @FXML
+    private Pane musicPane;
 
     @FXML
     private StackPane rootPane;
@@ -75,4 +96,6 @@ public class MainSceneController {
             e.printStackTrace();
         }
     }
+
+
 }
