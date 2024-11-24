@@ -56,7 +56,7 @@ public class SignUpSceneController {
         String Username = UsernameTextField.getText();
         Faculties Faculty = faculty.getValue();
        if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
-            System.out.println("Minden mezőt ki kell tölteni!"); //Üzenetkiíró részt csinálni !!!
+            System.out.println("Minden mezőt ki kell tölteni!");
             return null;
         }
         else
