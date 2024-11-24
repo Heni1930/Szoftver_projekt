@@ -54,15 +54,17 @@ public class SignUpSceneController {
         String Psswrd = Password.getText();
         String Surname = SurameTextField.getText();
         String Username = UsernameTextField.getText();
-        String Faculty = faculty.getValue().toString();
-        if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty() || Faculty.isEmpty()) {
+        Faculties Faculty = faculty.getValue();
+       if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
             System.out.println("Minden mezőt ki kell tölteni!"); //Üzenetkiíró részt csinálni !!!
             return null;
         }
         else
         {
-            Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculties.valueOf(Faculty));
-            //CustomerUtils.saveCustomer(customer);
+            Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculty);
+            CustomerUtils.saveCustomer(customer);
+            System.out.println(Name);
+            System.out.println(Psswrd);
             return customer;
         }
 
