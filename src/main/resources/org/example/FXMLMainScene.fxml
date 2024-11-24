@@ -19,40 +19,71 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="801.0" prefWidth="1189.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainSceneController">
+<AnchorPane prefHeight="801.0" prefWidth="1187.0" style="-fx-background-color: F1F1F1;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainSceneController">
    <children>
-      <Button layoutX="1069.0" layoutY="18.0" mnemonicParsing="false" onAction="#SignupButton" prefHeight="38.0" prefWidth="95.0" text="Sign Up" wrapText="true" AnchorPane.rightAnchor="24.799999999999955" AnchorPane.topAnchor="18.0">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-      <Button layoutX="955.0" layoutY="18.0" mnemonicParsing="false" onAction="#LoginButton" prefHeight="38.0" prefWidth="95.0" text="Login" wrapText="true" AnchorPane.rightAnchor="138.79999999999995" AnchorPane.topAnchor="18.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Text layoutX="89.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X University" wrappingWidth="174.373046875" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="21.1015625">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Circle fill="#155142" layoutX="53.0" layoutY="37.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="10.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="-1.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="1189.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="67.0">
+      <Pane layoutX="-3.0" layoutY="-6.0" prefHeight="74.0" prefWidth="1213.0" style="-fx-background-color: #353535;">
+         <children>
+            <Button layoutX="948.0" layoutY="21.0" mnemonicParsing="false" onAction="#LoginButton" prefHeight="38.0" prefWidth="95.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Login" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="1071.0" layoutY="21.0" mnemonicParsing="false" onAction="#SignupButton" prefHeight="38.0" prefWidth="95.0" style="-fx-background-color: transparent;" text="Sign Up" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="18.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="107.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X University" wrappingWidth="174.373046875">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="24.0" />
+               </font>
+            </Text>
+            <Circle fill="WHITE" layoutX="65.0" layoutY="40.0" radius="27.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane layoutY="207.0" prefHeight="83.0" prefWidth="1210.0" style="-fx-background-color: #353535;">
+         <children>
+            <GridPane layoutX="14.0" layoutY="9.0" prefHeight="66.0" prefWidth="937.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="257.0" style="-fx-background-radius: 50; -fx-background-color: white;" text="Faculty of Informatics" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-radius: 50; -fx-background-color: white;" text="Faculty of Medicine" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="250.0" style="-fx-background-radius: 50; -fx-background-color: white;" text="Faculty of Music" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="-1.0" layoutY="67.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1213.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="67.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.08235294371843338" green="0.3176470696926117" blue="0.25882354378700256" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.15945573318451897">
-                     <color>
-                        <Color red="0.08235294371843338" green="0.3176470696926117" blue="0.25882354378700256" />
+                        <Color red="0.23529411852359772" green="0.4313725531101227" blue="0.4431372582912445" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.4990253448486328" green="0.8421052694320679" blue="0.7563352584838867" />
+                        <Color red="0.10196078568696976" green="0.2078431397676468" blue="0.21568627655506134" />
                      </color>
                   </Stop>
                </stops>
@@ -60,43 +91,16 @@
          </fill></Rectangle>
       <Text fill="WHITE" layoutX="53.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renting out university essentials " AnchorPane.bottomAnchor="640.96875" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="673.953125" AnchorPane.topAnchor="117.46875">
          <font>
-            <Font size="32.0" />
+            <Font name="Yu Gothic UI Semibold" size="32.0" />
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#989fa686" height="66.0" layoutX="-6.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1187.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" />
-      <TextField layoutX="1016.0" layoutY="230.0" prefHeight="42.0" prefWidth="148.0" text="Search" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="230.0">
+      <TextField layoutX="1016.0" layoutY="230.0" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 50;" text="Search" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="230.0">
          <font>
             <Font name="System Italic" size="15.0" />
          </font>
       </TextField>
-      <GridPane layoutX="14.0" layoutY="218.0" prefHeight="66.0" prefWidth="934.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" text="Faculty of Informatics" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" text="Faculty of Medicine" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="250.0" text="Faculty of Music" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Button>
-         </children>
-      </GridPane>
-      <GridPane layoutY="297.0" prefHeight="504.0" prefWidth="1190.0">
+      <GridPane layoutY="297.0" prefHeight="504.0" prefWidth="1187.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="524.7999877929688" minWidth="10.0" prefWidth="278.00001220703126" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.7999786376953" minWidth="10.0" prefWidth="287.4000244140625" />
@@ -109,7 +113,7 @@
           <RowConstraints maxHeight="250.2" minHeight="10.0" prefHeight="210.99998779296874" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="261.0" prefWidth="278.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+            <AnchorPane prefHeight="261.0" prefWidth="278.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <children>
                   <ImageView fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
                      <image>
@@ -128,7 +132,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -181,7 +185,7 @@
                   </Pane>
                </children>
                <GridPane.margin>
-                  <Insets bottom="20.0" left="40.0" right="20.0" top="20.0" />
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </GridPane.margin>
             </AnchorPane>
             <AnchorPane prefHeight="261.0" prefWidth="278.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1">
@@ -203,7 +207,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -278,7 +282,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -353,7 +357,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #155142;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>

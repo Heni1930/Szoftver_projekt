@@ -18,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-   <AnchorPane prefHeight="423.0" prefWidth="339.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
+<AnchorPane prefHeight="423.0" prefWidth="339.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
       <children>
          <GridPane layoutX="99.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="220.0">
             <columnConstraints>
@@ -85,18 +85,18 @@
                <Font name="System Bold" size="18.0" />
             </font></Label>
          <Pane layoutX="-10.0" prefHeight="430.0" prefWidth="105.0" />
-         <Rectangle arcHeight="5.0" arcWidth="5.0" height="462.0" stroke="#ffffff00" strokeType="INSIDE" width="93.0">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" height="462.0" layoutX="-4.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="97.0">
             <fill>
                <LinearGradient endX="1.0" endY="1.0">
                   <stops>
                      <Stop>
                         <color>
-                           <Color red="0.08235294371843338" green="0.3176470696926117" blue="0.25882354378700256" />
+                           <Color red="0.10196078568696976" green="0.2078431397676468" blue="0.21568627655506134" />
                         </color>
                      </Stop>
                      <Stop offset="1.0">
                         <color>
-                           <Color red="0.3128654956817627" green="0.7576997876167297" blue="0.7894737124443054" />
+                           <Color red="0.23529411852359772" green="0.4313725531101227" blue="0.4431372582912445" />
                         </color>
                      </Stop>
                   </stops>
