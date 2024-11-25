@@ -20,7 +20,7 @@ import java.io.IOException;
 public class SignUpSceneController {
 
     @FXML
-    private TextField EmailAdressTextField;
+    private TextField EmailAddressTextField;
 
     @FXML
     private TextField NameTextField;
@@ -32,7 +32,7 @@ public class SignUpSceneController {
     private Button SignUpBt;
 
     @FXML
-    private TextField SurameTextField;
+    private TextField SureNameTextField;
 
     @FXML
     private TextField UsernameTextField;
@@ -46,24 +46,22 @@ public class SignUpSceneController {
         faculty.setItems(facultyList);
     }
 
-    public Customer signUp(ActionEvent actionEvent){
+    public void signUp(ActionEvent actionEvent){
 
 
-        String EmailAddress = EmailAdressTextField.getText();
+        String EmailAddress = EmailAddressTextField.getText();
         String Name = NameTextField.getText();
         String Psswrd = Password.getText();
-        String Surname = SurameTextField.getText();
+        String Surname = SureNameTextField.getText();
         String Username = UsernameTextField.getText();
-        String Faculty = faculty.getValue().toString();
-        if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty() || Faculty.isEmpty()) {
-            System.out.println("Minden mezőt ki kell tölteni!"); //Üzenetkiíró részt csinálni !!!
-            return null;
+        Faculties Faculty = faculty.getValue();
+       if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
+            System.out.println("Minden mezőt ki kell tölteni!");
         }
         else
         {
-            Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculties.valueOf(Faculty));
-            //CustomerUtils.saveCustomer(customer);
-            return customer;
+            Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculty);
+            CustomerUtils.saveCustomer(customer);
         }
 
     }
@@ -81,6 +79,7 @@ public class SignUpSceneController {
             e.printStackTrace();
         }
     }
+
 }
 
 

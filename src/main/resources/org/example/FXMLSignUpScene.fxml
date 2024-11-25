@@ -42,21 +42,27 @@
             </rowConstraints>
             <children>
                <Label text="Name" />
-               <Label text="Email adress" GridPane.rowIndex="4" />
+               <Label text="Surname" GridPane.rowIndex="2" />
+               <Label text="Email address" GridPane.rowIndex="4" />
                <Label text="Username" GridPane.rowIndex="6" />
                <Label text="Password" GridPane.rowIndex="8" />
-               <Label text="Faculty" GridPane.rowIndex="10" />
+               <Label text="Faculty" GridPane.rowIndex="10" />               
                <TextField fx:id="NameTextField" GridPane.rowIndex="1">
                   <GridPane.margin>
                      <Insets />
                   </GridPane.margin>
                </TextField>
-               <TextField fx:id="EmailAdressTextField" GridPane.rowIndex="5">
+               <TextField fx:id="SureNameTextField" GridPane.rowIndex="3">
                   <GridPane.margin>
                      <Insets />
                   </GridPane.margin>
                </TextField>
-               <TextField fx:id="SurameTextField" GridPane.rowIndex="3">
+               <TextField fx:id="EmailAddressTextField" GridPane.rowIndex="5">
+                  <GridPane.margin>
+                     <Insets />
+                  </GridPane.margin>
+               </TextField>
+               <TextField fx:id="UsernameTextField" GridPane.hgrow="NEVER" GridPane.rowIndex="7" GridPane.vgrow="NEVER">
                   <GridPane.margin>
                      <Insets />
                   </GridPane.margin>
@@ -66,14 +72,8 @@
                      <Insets />
                   </GridPane.margin>
                </PasswordField>
-               <Label text="Surname" GridPane.rowIndex="2" />
-               <TextField fx:id="UsernameTextField" GridPane.hgrow="NEVER" GridPane.rowIndex="7" GridPane.vgrow="NEVER">
-                  <GridPane.margin>
-                     <Insets />
-                  </GridPane.margin>
-               </TextField>
                <ComboBox fx:id="faculty" prefHeight="26.0" prefWidth="220.0" GridPane.rowIndex="11" />
-               <Button fx:id="SignUpBt" mnemonicParsing="false" prefHeight="26.0" prefWidth="220.0" text="Sign Up" GridPane.halignment="LEFT" GridPane.rowIndex="12">
+               <Button fx:id="SignUpBt" onAction="#signUp" mnemonicParsing="false" prefHeight="26.0" prefWidth="220.0" text="Sign Up" GridPane.halignment="LEFT" GridPane.rowIndex="12">
                   <GridPane.margin>
                      <Insets top="20.0" />
                   </GridPane.margin>

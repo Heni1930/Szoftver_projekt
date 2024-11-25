@@ -48,8 +48,8 @@ public class App extends Application {
         launch();
 
 
-        //CustomerUtils cUtils = new CustomerUtils(new JPACustomerDAO());
-        //cUtils.runUtils();
+//        CustomerUtils cUtils = new CustomerUtils(new JPACustomerDAO());
+//        cUtils.runUtils();
 
     }
 

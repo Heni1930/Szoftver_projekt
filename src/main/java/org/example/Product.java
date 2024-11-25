@@ -9,12 +9,16 @@ package org.example;
 //import jakarta.validation.constraints.NotBlank;
 //import lombok.*;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.List;
 
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 //@ToString(exclude = {"rentals"})
 //@EqualsAndHashCode
 @Entity
