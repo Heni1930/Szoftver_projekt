@@ -18,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="423.0" prefWidth="339.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
+   <AnchorPane prefHeight="423.0" prefWidth="339.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
       <children>
          <GridPane layoutX="99.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="220.0">
             <columnConstraints>
@@ -42,7 +42,8 @@
             </rowConstraints>
             <children>
                <Label text="Name" />
-               <Label text="Email adress" GridPane.rowIndex="4" />
+               <Label text="Surname" GridPane.rowIndex="2" />
+               <Label text="Email address" GridPane.rowIndex="4" />
                <Label text="Username" GridPane.rowIndex="6" />
                <Label text="Password" GridPane.rowIndex="8" />
                <Label text="Faculty" GridPane.rowIndex="10" />
@@ -51,12 +52,17 @@
                      <Insets />
                   </GridPane.margin>
                </TextField>
-               <TextField fx:id="EmailAdressTextField" GridPane.rowIndex="5">
+               <TextField fx:id="SureNameTextField" GridPane.rowIndex="3">
                   <GridPane.margin>
                      <Insets />
                   </GridPane.margin>
                </TextField>
-               <TextField fx:id="SurameTextField" GridPane.rowIndex="3">
+               <TextField fx:id="EmailAddressTextField" GridPane.rowIndex="5">
+                  <GridPane.margin>
+                     <Insets />
+                  </GridPane.margin>
+               </TextField>
+               <TextField fx:id="UsernameTextField" GridPane.hgrow="NEVER" GridPane.rowIndex="7" GridPane.vgrow="NEVER">
                   <GridPane.margin>
                      <Insets />
                   </GridPane.margin>
@@ -66,12 +72,6 @@
                      <Insets />
                   </GridPane.margin>
                </PasswordField>
-               <Label text="Surname" GridPane.rowIndex="2" />
-               <TextField fx:id="UsernameTextField" GridPane.hgrow="NEVER" GridPane.rowIndex="7" GridPane.vgrow="NEVER">
-                  <GridPane.margin>
-                     <Insets />
-                  </GridPane.margin>
-               </TextField>
                <ComboBox fx:id="faculty" prefHeight="26.0" prefWidth="220.0" GridPane.rowIndex="11" />
                <Button fx:id="SignUpBt" mnemonicParsing="false" onAction="#signUp" prefHeight="26.0" prefWidth="220.0" text="Sign Up" GridPane.halignment="LEFT" GridPane.rowIndex="12">
                   <GridPane.margin>
