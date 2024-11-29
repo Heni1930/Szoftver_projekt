@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
@@ -18,6 +19,8 @@ import java.io.IOException;
 
 public class MainSceneController {
 
+    @FXML
+    private BorderPane borderPane;
 
     @FXML
     private Button InformaticsBTN;
@@ -95,6 +98,31 @@ public class MainSceneController {
         {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void switchToInf(ActionEvent event) {
+        borderPane=new BorderPane();
+        borderPane.setCenter(informaticsPane);
+    }
+
+    @FXML
+    void switchToMed(ActionEvent event) {
+        borderPane=new BorderPane();
+        borderPane.setCenter(medicinePane);
+    }
+
+    @FXML
+    void switchToMusic(ActionEvent event) {
+        borderPane=new BorderPane();
+        borderPane.setCenter(musicPane);
+    }
+
+    public void switchPanes(Pane pane)
+    {
+        borderPane=new BorderPane();
+        borderPane.setCenter(pane);
+
     }
 
 
