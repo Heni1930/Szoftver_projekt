@@ -47,7 +47,6 @@ public class App extends Application {
         startDatabase();
         launch();
 
-
 //        CustomerUtils cUtils = new CustomerUtils(new JPACustomerDAO());
 //        cUtils.runUtils();
 
