@@ -57,12 +57,23 @@ public class SignUpSceneController {
         Faculties Faculty = faculty.getValue();
        if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
             System.out.println("Minden mezőt ki kell tölteni!");
-        }
-        else
-        {
-            Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculty);
-            CustomerUtils.saveCustomer(customer);
-        }
+       }
+       else
+       {
+            if(JPACustomerDAO.findCustomerByEmail(EmailAddress) != null)
+            {
+                System.out.println("This email address is already taken");
+            }
+            else if (JPACustomerDAO.findCustomerByUsername(Username) != null)
+            {
+                System.out.println("This username is already taken");
+            }
+            else
+            {
+                Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculty);
+                CustomerUtils.saveCustomer(customer);
+            }
+       }
 
     }
     public void LoginButton(ActionEvent actionEvent) {
