@@ -44,6 +44,12 @@ public class MainSceneController {
     private StackPane rootPane;
 
     @FXML
+    private static Button SignUpB;
+
+    @FXML
+    private static Button loginB;
+
+    @FXML
     void LoginButton(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
@@ -58,6 +64,20 @@ public class MainSceneController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public static void switchButtonLogin()
+    {
+        loginB.setVisible(false);
+        SignUpB.setText("Log out");
+    }
+
+    @FXML
+    public static void switchButtonLogout()
+    {
+        loginB.setVisible(true);
+        SignUpB.setText("Sign Up");
     }
 
     @FXML

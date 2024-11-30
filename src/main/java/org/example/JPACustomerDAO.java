@@ -61,7 +61,17 @@ public class JPACustomerDAO implements CustomerDAO {
         }
     }
 
-
+    public static Customer login(String username, String password) {
+        try {
+            TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c WHERE c.username = :username AND c.password = :password", Customer.class);
+            query.setParameter("username", username);
+            query.setParameter("password", password);
+            return query.getSingleResult();
+        }
+        catch (NoResultException e) {
+            return null;
+        }
+    }
 
     public static Customer findCustomerByEmail(String email) {
         TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c WHERE c.email=:email", Customer.class);

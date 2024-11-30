@@ -23,6 +23,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("FXMLMainScene"));
         stage.setScene(scene);
         stage.show();
+        stage.setResizable(false);
 
         stage.setOnCloseRequest(event->{
             Platform.exit();

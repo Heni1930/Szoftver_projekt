@@ -26,7 +26,7 @@ public class SignUpSceneController {
     private PasswordField Password;
 
     @FXML
-    private Button SignUpBt;
+    private Button SignUpB;
 
     @FXML
     private TextField SureNameTextField;
@@ -59,7 +59,7 @@ public class SignUpSceneController {
     }
 
     public void signUp(ActionEvent actionEvent) {
-        try {
+     try {
             String EmailAddress = EmailAddressTextField.getText();
             String Name = NameTextField.getText();
             String Psswrd = Password.getText();
@@ -93,15 +93,19 @@ public class SignUpSceneController {
                 else {
                     Customer customer = new Customer(Username, Psswrd, fullName, EmailAddress, Faculty);
                     CustomerUtils.saveCustomer(customer);
-
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("Registration is complete!");
+                    alert.showAndWait();
                     LoginButton(actionEvent);
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
 
+    }
 }
+
 
 
