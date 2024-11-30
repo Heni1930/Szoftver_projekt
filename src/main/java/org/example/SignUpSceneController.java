@@ -66,6 +66,7 @@ public class SignUpSceneController {
             String Surname = SureNameTextField.getText();
             String Username = UsernameTextField.getText();
             Faculties Faculty = faculty.getValue();
+            String fullName = Name + " " + Surname;
 
             if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
                 System.out.println("Minden mezőt ki kell tölteni!");
@@ -90,7 +91,7 @@ public class SignUpSceneController {
                     alert.showAndWait();
                 }
                 else {
-                    Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculty);
+                    Customer customer = new Customer(Username, Psswrd, fullName, EmailAddress, Faculty);
                     CustomerUtils.saveCustomer(customer);
 
                     LoginButton(actionEvent);
