@@ -55,9 +55,7 @@ public class MainSceneController {
             loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
             loginStage.setResizable(false);
             loginStage.showAndWait();
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -75,9 +73,7 @@ public class MainSceneController {
             loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
             loginStage.setResizable(false);
             loginStage.showAndWait();
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -93,37 +89,29 @@ public class MainSceneController {
             loginStage.initOwner(((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()));
             loginStage.setResizable(false);
             loginStage.showAndWait();
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @FXML
     void switchToInf(ActionEvent event) {
-        borderPane=new BorderPane();
-        borderPane.setCenter(informaticsPane);
+        informaticsPane.setVisible(true);
+        medicinePane.setVisible(false);
+        musicPane.setVisible(false);
     }
 
     @FXML
     void switchToMed(ActionEvent event) {
-        borderPane=new BorderPane();
-        borderPane.setCenter(medicinePane);
+        informaticsPane.setVisible(false);
+        medicinePane.setVisible(true);
+        musicPane.setVisible(false);
     }
 
     @FXML
     void switchToMusic(ActionEvent event) {
-        borderPane=new BorderPane();
-        borderPane.setCenter(musicPane);
+        informaticsPane.setVisible(false);
+        medicinePane.setVisible(false);
+        musicPane.setVisible(true);
     }
-
-    public void switchPanes(Pane pane)
-    {
-        borderPane=new BorderPane();
-        borderPane.setCenter(pane);
-
-    }
-
-
 }
