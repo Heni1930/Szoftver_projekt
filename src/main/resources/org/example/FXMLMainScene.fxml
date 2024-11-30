@@ -38,7 +38,7 @@
                   <Font name="Yu Gothic UI Semibold" size="24.0" />
                </font>
             </Text>
-            <Circle fill="WHITE" layoutX="65.0" layoutY="40.0" radius="27.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="65.0" layoutY="40.0" onMouseClicked="#PersonalAccount" radius="27.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" />
          </children>
       </Pane>
       <Pane layoutY="207.0" prefHeight="83.0" prefWidth="1274.0" style="-fx-background-color: #353535;">

@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -133,5 +134,21 @@ public class MainSceneController {
         informaticsPane.setVisible(false);
         medicinePane.setVisible(false);
         musicPane.setVisible(true);
+    }
+
+    public void PersonalAccount(MouseEvent mouseEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLPersonalAccount.fxml"));
+            Parent root = loader.load();
+            Stage AccountStage = new Stage();
+            AccountStage.setTitle("Personal Account");
+            AccountStage.setScene(new Scene(root));
+            AccountStage.initModality(Modality.APPLICATION_MODAL);
+            AccountStage.initOwner(((Stage) ((Node) mouseEvent.getSource()).getScene().getWindow()));
+            AccountStage.setResizable(false);
+            AccountStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
