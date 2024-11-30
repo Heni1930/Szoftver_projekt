@@ -1,7 +1,12 @@
 package org.example;
 
 
+import javax.persistence.*;
+import java.sql.Connection;
+
+
 public class CustomerUtils {
+
     private static CustomerDAO cDAO;
     static {
         cDAO = new JPACustomerDAO();

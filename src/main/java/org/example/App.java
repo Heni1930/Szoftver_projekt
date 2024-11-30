@@ -23,6 +23,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("FXMLMainScene"));
         stage.setScene(scene);
         stage.show();
+        stage.setResizable(false);
 
         stage.setOnCloseRequest(event->{
             Platform.exit();
@@ -34,7 +35,7 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
+    public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }

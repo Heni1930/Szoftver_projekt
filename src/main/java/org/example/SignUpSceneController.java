@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -29,7 +26,7 @@ public class SignUpSceneController {
     private PasswordField Password;
 
     @FXML
-    private Button SignUpBt;
+    private Button SignUpB;
 
     @FXML
     private TextField SureNameTextField;
@@ -46,25 +43,6 @@ public class SignUpSceneController {
         faculty.setItems(facultyList);
     }
 
-    public void signUp(ActionEvent actionEvent){
-
-
-        String EmailAddress = EmailAddressTextField.getText();
-        String Name = NameTextField.getText();
-        String Psswrd = Password.getText();
-        String Surname = SureNameTextField.getText();
-        String Username = UsernameTextField.getText();
-        Faculties Faculty = faculty.getValue();
-       if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
-            System.out.println("Minden mezőt ki kell tölteni!");
-        }
-        else
-        {
-            Customer customer = new Customer(Name, Psswrd, Username, EmailAddress, Faculty);
-            CustomerUtils.saveCustomer(customer);
-        }
-
-    }
     public void LoginButton(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
@@ -79,6 +57,55 @@ public class SignUpSceneController {
             e.printStackTrace();
         }
     }
+
+    public void signUp(ActionEvent actionEvent) {
+     try {
+            String EmailAddress = EmailAddressTextField.getText();
+            String Name = NameTextField.getText();
+            String Psswrd = Password.getText();
+            String Surname = SureNameTextField.getText();
+            String Username = UsernameTextField.getText();
+            Faculties Faculty = faculty.getValue();
+            String fullName = Name + " " + Surname;
+
+            if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
+                System.out.println("Minden mezőt ki kell tölteni!");
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Hiba");
+                alert.setHeaderText("All fields must be filled out!");
+                alert.showAndWait();
+            }
+            else {
+                if(JPACustomerDAO.isEmailExist(EmailAddress) > 0) {
+                    System.out.println("This email address is already taken");
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Hiba");
+                    alert.setHeaderText("This email address is already taken");
+                    alert.showAndWait();
+                }
+                else if (JPACustomerDAO.isUsernameExist(Username) > 0) {
+                    System.out.println("This username is already taken");
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Hiba");
+                    alert.setHeaderText("This username is already taken");
+                    alert.showAndWait();
+                }
+                else {
+                    Customer customer = new Customer(Username, Psswrd, fullName, EmailAddress, Faculty);
+                    CustomerUtils.saveCustomer(customer);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("Registration is complete!");
+                    alert.showAndWait();
+                    LoginButton(actionEvent);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
+
 
 
