@@ -36,6 +36,33 @@ public class JPACustomerDAO implements CustomerDAO {
         }
     }
 
+    public static int isEmailExist(String email) {
+        TypedQuery<Long> query = em.createQuery("SELECT COUNT(c) FROM Customer c WHERE c.email = :email", Long.class);
+        query.setParameter("email", email);
+        query.setMaxResults(1);
+        try {
+            long count = query.getSingleResult();
+            return (int) count;
+        } catch (NoResultException e) {
+            return 0;
+        }
+    }
+
+
+    public static int isUsernameExist(String username) {
+        TypedQuery<Long> query = em.createQuery("SELECT COUNT(c) FROM Customer c WHERE c.username = :username", Long.class);
+        query.setParameter("username", username);
+        query.setMaxResults(1);
+        try {
+            long count = query.getSingleResult();
+            return (int) count;
+        } catch (NoResultException e) {
+            return 0;
+        }
+    }
+
+
+
     public static Customer findCustomerByEmail(String email) {
         TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c WHERE c.email=:email", Customer.class);
         query.setParameter("email", email);

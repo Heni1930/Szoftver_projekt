@@ -7,18 +7,8 @@ import java.sql.Connection;
 
 public class CustomerUtils {
 
-    private static EntityManager entityManager;
-
-    public static EntityManager getEntityManager() {
-        if (entityManager == null) {
-            EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("YourPersistenceUnitName");
-            entityManager = entityManagerFactory.createEntityManager();
-        }
-        return entityManager;
-    }
-
     private static CustomerDAO cDAO;
-    {
+    static {
         cDAO = new JPACustomerDAO();
     }
 
