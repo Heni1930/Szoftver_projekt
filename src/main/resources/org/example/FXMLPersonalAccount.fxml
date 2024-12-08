@@ -16,8 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="1.7976931348623157E308" prefHeight="801.0" prefWidth="1189.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.AccountSceneController">
+<AnchorPane maxHeight="1.7976931348623157E308" prefHeight="801.0" prefWidth="1189.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.AccountSceneController">
    <children>
       <Text accessibleRole="BUTTON" layoutX="89.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X University" wrappingWidth="174.373046875" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="21.1015625">
          <font>
@@ -56,7 +55,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#989fa686" height="66.0" layoutX="-6.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1187.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" />
       <Pane layoutY="210.0" prefHeight="594.0" prefWidth="200.0" style="-fx-background-color: #155142;">
          <children>
-            <Pane prefHeight="54.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <Pane onMouseDragged="#nameOfPerson" prefHeight="54.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
                   <Label layoutX="14.0" layoutY="14.0" text="Name of Person">
                      <font>
@@ -75,17 +74,17 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label accessibleRole="BUTTON" alignment="CENTER" text="Personal Data" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label accessibleRole="BUTTON" alignment="CENTER" onMouseClicked="#PersonalData" text="Personal Data" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label accessibleRole="BUTTON" text="Rentals" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label accessibleRole="BUTTON" onMouseClicked="#showRentals" text="Rentals" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label accessibleRole="BUTTON" text="Sign Out" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                  <Label accessibleRole="BUTTON" onMouseClicked="#SignOut" text="Sign Out" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                      <font>
                         <Font size="14.0" />
                      </font>
