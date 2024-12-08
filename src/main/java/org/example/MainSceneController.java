@@ -11,14 +11,23 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 
 
 
 public class MainSceneController {
+
+    @FXML
+    public static Text circleText;
+
+    @FXML
+    public static Text personName;
 
     @FXML
     private BorderPane borderPane;
@@ -51,11 +60,18 @@ public class MainSceneController {
     private static Button loginB;
 
     @FXML
+    private static Circle nameCircle;
+
+    private static Stage loginStage;
+
+    private String letter = "";
+
+    @FXML
     void LoginButton(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
             Parent root = loader.load();
-            Stage loginStage = new Stage();
+            loginStage = new Stage();
             loginStage.setTitle("Login");
             loginStage.setScene(new Scene(root));
             loginStage.initModality(Modality.APPLICATION_MODAL);
@@ -64,6 +80,26 @@ public class MainSceneController {
             loginStage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public static void nameChangeCircle(String name)
+    {
+        char c = name.charAt(0);
+        circleText.setText("" + c);
+    }
+
+    @FXML
+    public static void writeName(String name)
+    {
+        personName.setText(name);
+    }
+
+    public static void LoginSceneOff()
+    {
+        if (loginStage != null) {
+            loginStage.close();
         }
     }
 

@@ -95,6 +95,15 @@ public class JPACustomerDAO implements CustomerDAO {
         }
     }
 
+    public static String getCustomerNameByUsername(String username) {
+        Customer customer = findCustomerByUsername(username);
+        if (customer != null) {
+            return customer.getName();
+        }
+        return null;
+    }
+
+
     @Override
     public void updateCustomer(Customer customer) {
         em.getTransaction().begin();
