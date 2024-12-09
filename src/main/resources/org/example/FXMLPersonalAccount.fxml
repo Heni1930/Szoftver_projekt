@@ -58,11 +58,16 @@
          <children>
             <Pane onMouseDragged="#nameOfPerson" prefHeight="54.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="14.0" layoutY="14.0" onMouseClicked="#nameOfPerson" text="Name of Person">
+                  <Label layoutX="14.0" layoutY="14.0" onMouseClicked="#nameOfPerson">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
+                  <Button layoutY="-2.0" mnemonicParsing="false" onAction="#nameOfPerson" prefHeight="60.0" prefWidth="200.0" text="Name of Person">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
             <GridPane layoutY="54.0" prefHeight="144.0" prefWidth="200.0">
@@ -116,17 +121,17 @@
                   <Image url="@../../../../../../../Downloads/raspberry%20pi.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="155.0" layoutY="14.0" prefHeight="27.0" prefWidth="119.0" text="Raspberry Pi">
+            <Label fx:id="FirstLabel" layoutX="155.0" layoutY="14.0" prefHeight="27.0" prefWidth="231.0" text="Raspberry Pi">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="155.0" layoutY="56.0" text="Date to return product:" textFill="RED">
+            <Label fx:id="SecondLabel" layoutX="155.0" layoutY="56.0" text="Date to return product:" textFill="RED">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="317.0" layoutY="58.0" text="2024/12/12" textFill="RED">
+            <Label fx:id="ThirdLabel" layoutX="317.0" layoutY="58.0" text="2024/12/12" textFill="RED">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
