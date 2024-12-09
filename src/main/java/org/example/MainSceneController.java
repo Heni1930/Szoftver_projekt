@@ -15,6 +15,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -24,10 +25,11 @@ import java.io.IOException;
 public class MainSceneController {
 
     @FXML
-    public static Text circleText;
+    private Text circleText;
 
+    @Getter
     @FXML
-    public static Text personName;
+    private Text personName;
 
     @FXML
     private BorderPane borderPane;
@@ -54,17 +56,39 @@ public class MainSceneController {
     private StackPane rootPane;
 
     @FXML
-    private static Button SignUpB;
+    private Button loginB;
 
     @FXML
-    private static Button loginB;
+    private Button SignUpB;
 
     @FXML
-    private static Circle nameCircle;
+    private Circle nameCircle;
 
     private static Stage loginStage;
 
     private String letter = "";
+
+    public void setPersonName(String name) {
+        if (personName != null) {
+            personName.setText(name);
+        }
+    }
+
+    public String getSignUpButtonText() {
+        return SignUpB.getText();
+    }
+
+    @FXML
+    public void updateButtonsAfterLogin() {
+        loginB.setVisible(false);
+        SignUpB.setText("Log Out");
+    }
+
+    @FXML
+    public void updateButtonsAfterLogout() {
+        loginB.setVisible(true);
+        SignUpB.setText("Sign Up");
+    }
 
     @FXML
     void LoginButton(ActionEvent event) {
@@ -84,18 +108,6 @@ public class MainSceneController {
     }
 
     @FXML
-    public static void nameChangeCircle(String name)
-    {
-        char c = name.charAt(0);
-        circleText.setText("" + c);
-    }
-
-    @FXML
-    public static void writeName(String name)
-    {
-        personName.setText(name);
-    }
-
     public static void LoginSceneOff()
     {
         if (loginStage != null) {
@@ -104,37 +116,32 @@ public class MainSceneController {
     }
 
     @FXML
-    public static void switchButtonLogin()
-    {
-        loginB.setVisible(false);
-        SignUpB.setText("Log out");
-    }
-
-    @FXML
-    public static void switchButtonLogout()
-    {
-        loginB.setVisible(true);
-        SignUpB.setText("Sign Up");
-    }
-
-    @FXML
     void SignupButton(ActionEvent event) {
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSignUpScene.fxml"));
-            Parent root = loader.load();
-            Stage loginStage = new Stage();
-            loginStage.setTitle("Sign Up");
-            loginStage.setScene(new Scene(root));
-            loginStage.initModality(Modality.APPLICATION_MODAL);
-            loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
-            loginStage.setResizable(false);
-            loginStage.showAndWait();
-        } catch (IOException e) {
-            e.printStackTrace();
+        String buttonText = getSignUpButtonText();
+        System.out.println("Current button text: " + buttonText);
+        if (getSignUpButtonText().equals("Sign Up")) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSignUpScene.fxml"));
+                Parent root = loader.load();
+                Stage loginStage = new Stage();
+                loginStage.setTitle("Sign Up");
+                loginStage.setScene(new Scene(root));
+                loginStage.initModality(Modality.APPLICATION_MODAL);
+                loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
+                loginStage.setResizable(false);
+                loginStage.showAndWait();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if (getSignUpButtonText().equals("Log Out"))
+        {
+            updateButtonsAfterLogout();
+            personName.setText("");
         }
     }
 
+    @FXML
     public void rentButton(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLRentScene.fxml"));
@@ -172,6 +179,7 @@ public class MainSceneController {
         musicPane.setVisible(true);
     }
 
+    @FXML
     public void PersonalAccount(MouseEvent mouseEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLPersonalAccount.fxml"));
