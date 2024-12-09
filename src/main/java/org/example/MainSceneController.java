@@ -66,6 +66,8 @@ public class MainSceneController {
 
     private static Stage loginStage;
 
+    private static Stage AccountStage;
+
     private String letter = "";
 
     public void setPersonName(String name) {
@@ -115,6 +117,7 @@ public class MainSceneController {
         }
     }
 
+
     @FXML
     void SignupButton(ActionEvent event) {
         String buttonText = getSignUpButtonText();
@@ -138,6 +141,9 @@ public class MainSceneController {
         {
             updateButtonsAfterLogout();
             personName.setText("");
+            LoginSceneController.name = "";
+            LoginSceneController.password = "";
+            LoginSceneController.username = "";
         }
     }
 
@@ -184,7 +190,7 @@ public class MainSceneController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLPersonalAccount.fxml"));
             Parent root = loader.load();
-            Stage AccountStage = new Stage();
+            AccountStage = new Stage();
             AccountStage.setTitle("Personal Account");
             AccountStage.setScene(new Scene(root));
             AccountStage.initModality(Modality.APPLICATION_MODAL);
@@ -193,6 +199,15 @@ public class MainSceneController {
             AccountStage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public static void PersonalSceneOff()
+    {
+        if(AccountStage != null)
+        {
+            AccountStage.close();
         }
     }
 }

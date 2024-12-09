@@ -16,9 +16,9 @@ public class LoginSceneController {
     @FXML
     private TextField LoginUsernamefield;
 
-    private static String username = "";
-    private static String password = "";
-    private static String name = "";
+    public static String username = "";
+    public static String password = "";
+    public static String name = "";
 
     public void login(ActionEvent actionEvent) {
         username = LoginUsernamefield.getText();
