@@ -48,11 +48,12 @@ public class SignUpSceneController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
             Parent root = loader.load();
             Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            Scene signUpScene = new Scene(root);
-            currentStage.setScene(signUpScene);
+            Scene loginScene = new Scene(root);
+            currentStage.setScene(loginScene);
             currentStage.setTitle("Login");
             currentStage.centerOnScreen();
             currentStage.setResizable(false);
+            currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
