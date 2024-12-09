@@ -1,5 +1,6 @@
 package org.example;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
@@ -7,19 +8,28 @@ import javafx.scene.shape.Circle;
 public class AccountSceneController {
 
     @FXML
-    public void SignOut(MouseEvent mouseEvent) {
+    public void SignOut(ActionEvent actionEvent) {
+        MainSceneController.PersonalSceneOff();
         MainSceneController mainController = (MainSceneController) App.getCurrentController();
         if (mainController != null) {
             mainController.updateButtonsAfterLogin();
+            mainController.updateButtonsAfterLogout();
+            mainController.getPersonName().setText("");
+            LoginSceneController.name = "";
+            LoginSceneController.password = "";
+            LoginSceneController.username = "";
         }
     }
 
-    public void PersonalData(MouseEvent mouseEvent) {
+    @FXML
+    public void PersonalData(ActionEvent actionEvent) {
     }
 
-    public void showRentals(MouseEvent mouseEvent) {
+    @FXML
+    public void showRentals(ActionEvent actionEvent) {
     }
 
-    public void nameOfPerson(MouseEvent mouseEvent) {
+    @FXML
+    public void nameOfPerson(ActionEvent actionEvent) {
     }
 }
