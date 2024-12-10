@@ -109,7 +109,7 @@ public class AccountSceneController {
         }
         else
         {
-            FirstLabel.setText("Raspberry Pi");
+            FirstLabel.setText(JPARentalDAO.findProductNamesByUsername(LoginSceneController.username).toString());
             SecondLabel.setText("Date to return product:");
             ThirdLabel.setText("2024/12/12");
         }

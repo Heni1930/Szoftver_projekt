@@ -2,6 +2,8 @@ package org.example;
 
 import javax.persistence.*;
 
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class JPARentalDAO implements RentalDAO {
@@ -26,6 +28,47 @@ public class JPARentalDAO implements RentalDAO {
             return null;
         }
     }
+
+    public static List<String> findProductNamesByUsername(String username) {
+        try {
+            TypedQuery<Integer> customerQuery = em.createQuery("SELECT c.id FROM Customer c WHERE c.username = :username", Integer.class);
+            customerQuery.setParameter("username", username);
+            Integer customerId = customerQuery.getSingleResult();
+            if (customerId == null) {
+                return Collections.emptyList();
+            }
+            TypedQuery<Integer> rentalQuery = em.createQuery("SELECT r.productId FROM Rental r WHERE r.customerId = :customerId", Integer.class);
+            rentalQuery.setParameter("customerId", customerId);
+            List<Integer> productIds = rentalQuery.getResultList();
+            if (productIds.isEmpty()) {
+                return Collections.emptyList();
+            }
+            TypedQuery<String> productQuery = em.createQuery("SELECT p.name FROM Product p WHERE p.id IN :productIds", String.class);
+            productQuery.setParameter("productIds", productIds);
+            return productQuery.getResultList();
+        } catch (NoResultException e) {
+            return Collections.emptyList();
+        }
+
+
+    }
+
+   /* public static Date findProductDatesByUsername(String username) {
+        try {
+            TypedQuery<Integer> customerQuery = em.createQuery("SELECT c.id FROM Customer c WHERE c.username = :username", Integer.class);
+            customerQuery.setParameter("username", username);
+            Integer customerId = customerQuery.getSingleResult();
+            if (customerId == null) {
+                return .getSingleResult();
+            }
+            TypedQuery<Date> rentalQuery = em.createQuery("SELECT r.rentalDate FROM Rental r WHERE r.customerId = :customerId", Date.class);
+            rentalQuery.setParameter("customerId", customerId);
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
+    }*/
+
 
     @Override
     public List<Rental> getAllRentals() {
