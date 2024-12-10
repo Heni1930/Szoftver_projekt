@@ -5,13 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.h2.tools.Server;
 import javafx.application.Platform;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.net.URL;
-
 /**
  * JavaFX App with corrected FXML loading
  */
@@ -28,14 +28,15 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(loginFxmlUrl);
         Parent root = loader.load();
         scene = new Scene(root);
+        stage.initStyle(StageStyle.DECORATED);
         stage.setScene(scene);
         stage.setTitle("Main");
-        stage.show();
         stage.setResizable(false);
         stage.setOnCloseRequest(event -> {
             Platform.exit();
             System.exit(0);
         });
+        stage.show();
     }
 
     public static void changeScene(String fxml) throws IOException {
