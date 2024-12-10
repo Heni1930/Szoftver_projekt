@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.time.Period;
 
+
 @Getter
 public class RentSceneController {
 
