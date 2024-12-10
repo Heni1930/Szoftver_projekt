@@ -129,6 +129,8 @@ public class MainSceneController{
 
     public void rentButton(ActionEvent actionEvent) {
         try {
+            Object c = actionEvent.getSource();
+            System.out.println(c);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLRentScene.fxml"));
             Parent root = loader.load();
             Stage loginStage = new Stage();
