@@ -51,6 +51,8 @@ public class MainSceneController{
 
     private static Stage AccountStage;
 
+    private static Stage RentStage;
+
     private String letter = "";
 
     @FXML
@@ -96,13 +98,21 @@ public class MainSceneController{
             e.printStackTrace();
         }
     }
-    @FXML
+
+    public static void RentSceneOff()
+    {
+        if (RentStage != null) {
+            RentStage.close();
+        }
+    }
+
     public static void LoginSceneOff()
     {
         if (loginStage != null) {
             loginStage.close();
         }
     }
+
     @FXML
     void SignupButton(ActionEvent event) {
         String buttonText = getSignUpButtonText();
@@ -143,13 +153,13 @@ public class MainSceneController{
                 rentSceneController.desc(rid);
                 rentSceneController.quantity(rid);
                 rentSceneController.dateSet(rid);
-                Stage loginStage = new Stage();
-                loginStage.setTitle("Rental");
-                loginStage.setScene(new Scene(root));
-                loginStage.initModality(Modality.APPLICATION_MODAL);
-                loginStage.initOwner(((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()));
-                loginStage.setResizable(false);
-                loginStage.showAndWait();
+                RentStage = new Stage();
+                RentStage.setTitle("Rental");
+                RentStage.setScene(new Scene(root));
+                RentStage.initModality(Modality.APPLICATION_MODAL);
+                RentStage.initOwner(((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()));
+                RentStage.setResizable(false);
+                RentStage.showAndWait();
             } catch (IOException e) {
                 e.printStackTrace();
             }
