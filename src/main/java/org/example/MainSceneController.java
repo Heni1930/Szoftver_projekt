@@ -192,6 +192,7 @@ public class MainSceneController{
             default: return Pane0;
         }
     }
+
     public static void setPanesVisibility(boolean visibility, Pane... panes) {
         for (Pane pane : panes) {
             pane.setVisible(visibility);
