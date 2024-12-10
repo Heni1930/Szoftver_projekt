@@ -58,7 +58,7 @@ public class MainSceneController{
 
 
     @FXML
-    public void LoginButton(ActionEvent event) {
+    void LoginButton(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
             Parent root = loader.load();

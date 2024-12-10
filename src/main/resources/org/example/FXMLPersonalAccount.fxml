@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -17,7 +16,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" prefHeight="801.0" prefWidth="1189.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.AccountSceneController">
+
+<AnchorPane maxHeight="1.7976931348623157E308" prefHeight="801.0" prefWidth="1189.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.AccountSceneController">
    <children>
       <Text accessibleRole="BUTTON" layoutX="89.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X University" wrappingWidth="174.373046875" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="21.1015625">
          <font>
@@ -56,60 +56,40 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#989fa686" height="66.0" layoutX="-6.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1187.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" />
       <Pane layoutY="210.0" prefHeight="594.0" prefWidth="200.0" style="-fx-background-color: #155142;">
          <children>
-            <Pane onMouseDragged="#nameOfPerson" prefHeight="54.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <Pane prefHeight="54.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="14.0" layoutY="14.0" onMouseClicked="#nameOfPerson">
+                  <Label layoutX="14.0" layoutY="14.0" text="Name of Person">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutY="-2.0" mnemonicParsing="false" onAction="#nameOfPerson" prefHeight="60.0" prefWidth="200.0" text="Name of Person">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Button>
                </children>
             </Pane>
             <GridPane layoutY="54.0" prefHeight="144.0" prefWidth="200.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Label accessibleRole="BUTTON" alignment="CENTER" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label accessibleRole="BUTTON" alignment="CENTER" text="Personal Data" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label accessibleRole="BUTTON" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Label accessibleRole="BUTTON" text="Rentals" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label accessibleRole="BUTTON" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                  <Label accessibleRole="BUTTON" text="Sign Out" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                      <font>
-                        <Font size="22.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#PersonalData" prefHeight="43.0" prefWidth="200.0" text="Personal Data">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#showRentals" prefHeight="54.0" prefWidth="200.0" text="Rentals" textOverrun="CLIP" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#SignOut" prefHeight="47.0" prefWidth="200.0" text="Sign Out" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Button>
                </children>
             </GridPane>
          </children>
@@ -121,17 +101,17 @@
                   <Image url="@../../../../../../../Downloads/raspberry%20pi.jpeg" />
                </image>
             </ImageView>
-            <Label fx:id="FirstLabel" layoutX="155.0" layoutY="14.0" prefHeight="27.0" prefWidth="231.0" text="Raspberry Pi">
+            <Label layoutX="155.0" layoutY="14.0" prefHeight="27.0" prefWidth="119.0" text="Raspberry Pi">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SecondLabel" layoutX="155.0" layoutY="56.0" text="Date to return product:" textFill="RED">
+            <Label layoutX="155.0" layoutY="56.0" text="Date to return product:" textFill="RED">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="ThirdLabel" layoutX="317.0" layoutY="58.0" text="2024/12/12" textFill="RED">
+            <Label layoutX="317.0" layoutY="58.0" text="2024/12/12" textFill="RED">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

@@ -18,92 +18,92 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-   <AnchorPane prefHeight="423.0" prefWidth="339.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
-      <children>
-         <GridPane layoutX="99.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="220.0">
-            <columnConstraints>
-               <ColumnConstraints hgrow="SOMETIMES" maxWidth="560.7999267578125" minWidth="10.0" prefWidth="319.2" />
-               <ColumnConstraints hgrow="SOMETIMES" maxWidth="521.6000244140624" minWidth="0.0" prefWidth="0.0" />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-               <Label text="Name" />
-               <Label text="Surname" GridPane.rowIndex="2" />
-               <Label text="Email address" GridPane.rowIndex="4" />
-               <Label text="Username" GridPane.rowIndex="6" />
-               <Label text="Password" GridPane.rowIndex="8" />
-               <Label text="Faculty" GridPane.rowIndex="10" />
-               <TextField fx:id="NameTextField" GridPane.rowIndex="1">
-                  <GridPane.margin>
-                     <Insets />
-                  </GridPane.margin>
-               </TextField>
-               <TextField fx:id="SureNameTextField" GridPane.rowIndex="3">
-                  <GridPane.margin>
-                     <Insets />
-                  </GridPane.margin>
-               </TextField>
-               <TextField fx:id="EmailAddressTextField" GridPane.rowIndex="5">
-                  <GridPane.margin>
-                     <Insets />
-                  </GridPane.margin>
-               </TextField>
-               <TextField fx:id="UsernameTextField" GridPane.hgrow="NEVER" GridPane.rowIndex="7" GridPane.vgrow="NEVER">
-                  <GridPane.margin>
-                     <Insets />
-                  </GridPane.margin>
-               </TextField>
-               <PasswordField fx:id="Password" prefHeight="26.0" prefWidth="254.0" GridPane.rowIndex="9">
-                  <GridPane.margin>
-                     <Insets />
-                  </GridPane.margin>
-               </PasswordField>
-               <ComboBox fx:id="faculty" prefHeight="26.0" prefWidth="220.0" GridPane.rowIndex="11" />
-               <Button fx:id="SignUpBt" mnemonicParsing="false" onAction="#signUp" prefHeight="26.0" prefWidth="220.0" text="Sign Up" GridPane.halignment="LEFT" GridPane.rowIndex="12">
-                  <GridPane.margin>
-                     <Insets top="20.0" />
-                  </GridPane.margin>
-               </Button>
-            </children>
-         </GridPane>
-         <Label layoutX="99.0" layoutY="23.0" text="Sign Up">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font></Label>
-         <Pane layoutX="-10.0" prefHeight="430.0" prefWidth="105.0" />
-         <Rectangle arcHeight="5.0" arcWidth="5.0" height="462.0" layoutX="-4.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="97.0">
-            <fill>
-               <LinearGradient endX="1.0" endY="1.0">
-                  <stops>
-                     <Stop>
-                        <color>
-                           <Color red="0.10196078568696976" green="0.2078431397676468" blue="0.21568627655506134" />
-                        </color>
-                     </Stop>
-                     <Stop offset="1.0">
-                        <color>
-                           <Color red="0.23529411852359772" green="0.4313725531101227" blue="0.4431372582912445" />
-                        </color>
-                     </Stop>
-                  </stops>
-               </LinearGradient>
-            </fill>
-         </Rectangle>
-         <Text layoutX="99.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you already have an account log in here" />
-         <Button layoutX="170.0" layoutY="429.0" mnemonicParsing="false" onAction="#LoginButton" style="-fx-background-color: white;" text="Login" textFill="#265b4e" />
-      </children>
-   </AnchorPane>
+<AnchorPane prefHeight="423.0" prefWidth="339.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SignUpSceneController">
+   <children>
+      <GridPane layoutX="99.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="220.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="560.7999267578125" minWidth="10.0" prefWidth="319.2" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="521.6000244140624" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Name" />
+            <Label text="Surname" GridPane.rowIndex="2" />
+            <Label text="Email address" GridPane.rowIndex="4" />
+            <Label text="Username" GridPane.rowIndex="6" />
+            <Label text="Password" GridPane.rowIndex="8" />
+            <Label text="Faculty" GridPane.rowIndex="10" />
+            <TextField fx:id="NameTextField" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="SureNameTextField" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="EmailAddressTextField" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="UsernameTextField" GridPane.hgrow="NEVER" GridPane.rowIndex="7" GridPane.vgrow="NEVER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <PasswordField fx:id="Password" prefHeight="26.0" prefWidth="254.0" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </PasswordField>
+            <ComboBox fx:id="faculty" prefHeight="26.0" prefWidth="220.0" GridPane.rowIndex="11" />
+            <Button fx:id="SignUpBt" mnemonicParsing="false" onAction="#signUp" prefHeight="26.0" prefWidth="220.0" text="Sign Up" GridPane.halignment="LEFT" GridPane.rowIndex="12">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <Label layoutX="99.0" layoutY="23.0" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Pane layoutX="-10.0" prefHeight="430.0" prefWidth="105.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="462.0" layoutX="-4.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="97.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.10196078568696976" green="0.2078431397676468" blue="0.21568627655506134" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.23529411852359772" green="0.4313725531101227" blue="0.4431372582912445" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text layoutX="99.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you already have an account log in here" />
+      <Button layoutX="170.0" layoutY="429.0" mnemonicParsing="false" onAction="#LoginButton" style="-fx-background-color: white;" text="Login" textFill="#265b4e" />
+   </children>
+</AnchorPane>

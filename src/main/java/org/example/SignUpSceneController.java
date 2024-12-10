@@ -48,19 +48,18 @@ public class SignUpSceneController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
             Parent root = loader.load();
             Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            Scene loginScene = new Scene(root);
-            currentStage.setScene(loginScene);
+            Scene signUpScene = new Scene(root);
+            currentStage.setScene(signUpScene);
             currentStage.setTitle("Login");
             currentStage.centerOnScreen();
             currentStage.setResizable(false);
-            currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void signUp(ActionEvent actionEvent) {
-     try {
+        try {
             String EmailAddress = EmailAddressTextField.getText();
             String Name = NameTextField.getText();
             String Psswrd = Password.getText();
@@ -107,6 +106,5 @@ public class SignUpSceneController {
 
     }
 }
-
 
 

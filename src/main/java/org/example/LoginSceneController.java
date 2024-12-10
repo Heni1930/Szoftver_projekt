@@ -22,13 +22,9 @@ public class LoginSceneController {
     @FXML
     private TextField LoginUsernamefield;
 
-    public static String username = "";
-    public static String password = "";
-    public static String name = "";
-
     public void login(ActionEvent actionEvent) {
-        username = LoginUsernamefield.getText();
-        password = LoginPasswordField.getText();
+        String username = LoginUsernamefield.getText();
+        String password = LoginPasswordField.getText();
 
         Customer customer = JPACustomerDAO.login(username, password);
 
@@ -43,12 +39,6 @@ public class LoginSceneController {
             stage.close();
 
             System.out.println(customer);
-            MainSceneController.LoginSceneOff();
-            name = JPACustomerDAO.getCustomerNameByUsername(username);
-            //MainSceneController.writeName(name);
-            //MainSceneController.switchButtonLogin();
-            //MainSceneController.switchButtonLogout();
-
         }
         else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
