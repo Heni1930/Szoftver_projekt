@@ -34,6 +34,10 @@ public class LoginSceneController {
             alert.setHeaderText(null);
             alert.setContentText("The logged-in user is " + customer.getName() + ".");
             alert.showAndWait();
+
+            Stage stage = (Stage) LoginPasswordField.getScene().getWindow();
+            stage.close();
+
             System.out.println(customer);
         }
         else {

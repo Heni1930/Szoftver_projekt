@@ -2,15 +2,11 @@
 
 package org.example;
 
-//import jakarta.persistence.*;
-//import jakarta.validation.constraints.Pattern;
-//import jakarta.validation.constraints.Size;
-//import lombok.*;
-
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.*;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -23,15 +19,16 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    //@NonNull(message = "Username cannot be null")
+    @NotBlank(message = "Username cannot be empty!")
     private String username;
-    @Basic(optional = false)
+    @NotBlank(message = "Password cannot be empty!")
     private String password;
-    @Basic(optional = false)
+    @NotBlank(message = "Name cannot be empty!")
     private String name;
-    @Basic(optional = false)
+    @NotBlank(message = "Email cannot be empty!")
+    @Pattern(regexp = "^[\\w.%+-]+@[\\w.-]+\\.[A-Za-z]{2,6}$", message = "Invalid email format!")
     private String email;
-    @Basic(optional = false)
+    @NotNull(message = "Faculty cannot be empty!")
     private Faculties faculty;
 
     public Customer(String username, String password, String name, String email, Faculties faculty) {

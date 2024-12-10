@@ -68,7 +68,7 @@ public class SignUpSceneController {
             Faculties Faculty = faculty.getValue();
             String fullName = Name + " " + Surname;
 
-            if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty()) {
+            if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty() || Faculty == null) {
                 System.out.println("Minden mezőt ki kell tölteni!");
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Hiba");
