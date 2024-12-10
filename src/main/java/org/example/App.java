@@ -15,6 +15,7 @@ import java.net.URL;
 /**
  * JavaFX App with corrected FXML loading!
  */
+
 public class App extends Application {
 
     private static Stage primaryStage;
