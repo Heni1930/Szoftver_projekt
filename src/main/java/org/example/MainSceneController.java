@@ -36,15 +36,6 @@ public class MainSceneController{
     private BorderPane borderPane;
 
     @FXML
-    private Pane informaticsPane;
-
-    @FXML
-    private Pane medicinePane;
-
-    @FXML
-    private Pane musicPane;
-
-    @FXML
     private StackPane rootPane;
 
     @FXML
@@ -172,7 +163,7 @@ public class MainSceneController{
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLPersonalAccount.fxml"));
             Parent root = loader.load();
-            Stage AccountStage = new Stage();
+            AccountStage = new Stage();
             AccountStage.setTitle("Personal Account");
             AccountStage.setScene(new Scene(root));
             AccountStage.initModality(Modality.APPLICATION_MODAL);

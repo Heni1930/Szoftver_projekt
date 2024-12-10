@@ -2,14 +2,21 @@ package org.example;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class LoginSceneController {
 
+    public Text loginProblem;
     @FXML
     private PasswordField LoginPasswordField;
 
@@ -48,17 +55,21 @@ public class LoginSceneController {
             }
 
         } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Login Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Invalid username or password!");
-            alert.showAndWait();
+            loginProblem.setText("Invalid username or password");
         }
     }
 
     public void SignupButton(ActionEvent actionEvent) {
         try {
-            App.changeScene("FXMLSignUpScene");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSignUpScene.fxml"));
+            Parent root = loader.load();
+            Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene SignUPScene = new Scene(root);
+            currentStage.setScene(SignUPScene);
+            currentStage.setTitle("Sign Up");
+            currentStage.centerOnScreen();
+            currentStage.setResizable(false);
+            currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

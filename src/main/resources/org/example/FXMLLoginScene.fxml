@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="270.0" prefWidth="337.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoginSceneController">
+<AnchorPane prefHeight="298.0" prefWidth="337.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoginSceneController">
         <children>
             <GridPane layoutX="37.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="261.0">
                 <columnConstraints>
@@ -48,7 +48,8 @@
                     </Label>
                 </children>
             </Pane>
-            <Text layoutX="60.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you are not yet signed up sing up here" />
+            <Text fx:id="loginProblem" layoutX="60.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you are not yet signed up sing up here" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" />
             <Button layoutX="142.0" layoutY="240.0" mnemonicParsing="false" onAction="#SignupButton" style="-fx-background-color: white;" text="Sign Up" textFill="#1a3537" />
+      <Text fx:id="loginProblem" fill="RED" layoutX="63.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="215.009765625" />
         </children>
     </AnchorPane>
