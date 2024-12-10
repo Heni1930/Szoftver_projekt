@@ -11,9 +11,7 @@ import javafx.application.Platform;
 import java.io.IOException;
 import java.sql.SQLException;
 
-/**
- * JavaFX  App
- */
+
 public class App extends Application {
 
     private static Scene scene;
