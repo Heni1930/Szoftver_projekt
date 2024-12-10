@@ -11,7 +11,6 @@ import javafx.application.Platform;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.net.URL;
-
 /**
  * JavaFX App with corrected FXML loading
  */
