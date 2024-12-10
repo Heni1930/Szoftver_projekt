@@ -142,6 +142,7 @@ public class MainSceneController{
                 RentSceneController rentSceneController = loader.getController();
                 rentSceneController.desc(rid);
                 rentSceneController.quantity(rid);
+                rentSceneController.dateSet(rid);
                 Stage loginStage = new Stage();
                 loginStage.setTitle("Rental");
                 loginStage.setScene(new Scene(root));
