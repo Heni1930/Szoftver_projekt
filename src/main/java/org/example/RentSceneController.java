@@ -1,11 +1,18 @@
 package org.example;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -31,8 +38,8 @@ public class RentSceneController {
         this.db.setText(db);
     }
 
-    public void setDate(String db) {
-        this.date.setText(db);
+    public void setDate(String date) {
+        this.date.setText(date);
     }
 
     public void desc(String id) {
@@ -55,4 +62,26 @@ public class RentSceneController {
         setDate("" + futureDate);
     }
 
+    public void userRent(ActionEvent actionEvent) {
+        if(LoginSceneController.username.equals(""))
+        {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
+                Parent root = loader.load();
+                Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                Scene loginScene = new Scene(root);
+                currentStage.setScene(loginScene);
+                currentStage.setTitle("Login");
+                currentStage.centerOnScreen();
+                currentStage.setResizable(false);
+                currentStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            MainSceneController.RentSceneOff();
+        }
+    }
 }
