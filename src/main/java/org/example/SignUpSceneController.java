@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -16,6 +17,7 @@ import java.io.IOException;
 
 public class SignUpSceneController {
 
+    public Text SignUpProblem;
     @FXML
     private TextField EmailAddressTextField;
 
@@ -71,25 +73,16 @@ public class SignUpSceneController {
 
             if (EmailAddress.isEmpty() || Name.isEmpty() || Psswrd.isEmpty() || Surname.isEmpty() || Username.isEmpty() || Faculty == null) {
                 System.out.println("Minden mezőt ki kell tölteni!");
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setTitle("Hiba");
-                alert.setHeaderText("All fields must be filled out!");
-                alert.showAndWait();
+                SignUpProblem.setText("All fields must be filled out!");
             }
             else {
                 if(JPACustomerDAO.isEmailExist(EmailAddress) > 0) {
                     System.out.println("This email address is already taken");
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Hiba");
-                    alert.setHeaderText("This email address is already taken");
-                    alert.showAndWait();
+                    SignUpProblem.setText("This email address is already taken");
                 }
                 else if (JPACustomerDAO.isUsernameExist(Username) > 0) {
                     System.out.println("This username is already taken");
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Hiba");
-                    alert.setHeaderText("This username is already taken");
-                    alert.showAndWait();
+                    SignUpProblem.setText("This username is already taken");
                 }
                 else {
                     Customer customer = new Customer(Username, Psswrd, fullName, EmailAddress, Faculty);
