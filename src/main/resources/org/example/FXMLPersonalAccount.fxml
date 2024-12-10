@@ -105,7 +105,7 @@
                         <Font size="22.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#SignOut" prefHeight="47.0" prefWidth="200.0" text="Sign Out" GridPane.rowIndex="2">
+                  <Button fx:id="SignUpOrInB" mnemonicParsing="false" onAction="#SignOut" prefHeight="47.0" prefWidth="200.0" text="Sign Out" GridPane.rowIndex="2">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -121,17 +121,17 @@
                   <Image url="@../../../../../../../Downloads/raspberry%20pi.jpeg" />
                </image>
             </ImageView>
-            <Label fx:id="FirstLabel" layoutX="155.0" layoutY="14.0" prefHeight="27.0" prefWidth="231.0" text="Raspberry Pi">
+            <Label fx:id="FirstLabel" layoutX="155.0" layoutY="14.0" prefHeight="27.0" prefWidth="462.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="SecondLabel" layoutX="155.0" layoutY="56.0" text="Date to return product:" textFill="RED">
+            <Label fx:id="SecondLabel" layoutX="155.0" layoutY="56.0" prefHeight="20.0" prefWidth="259.0" textFill="RED">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="ThirdLabel" layoutX="317.0" layoutY="58.0" text="2024/12/12" textFill="RED">
+            <Label fx:id="ThirdLabel" layoutX="456.0" layoutY="58.0" prefHeight="17.0" prefWidth="156.0" textFill="RED">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
