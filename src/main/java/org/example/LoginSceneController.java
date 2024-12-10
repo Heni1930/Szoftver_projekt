@@ -9,12 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class LoginSceneController {
 
+    public Text loginProblem;
     @FXML
     private PasswordField LoginPasswordField;
 
@@ -53,11 +55,7 @@ public class LoginSceneController {
             }
 
         } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Login Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Invalid username or password!");
-            alert.showAndWait();
+            loginProblem.setText("Invalid username or password");
         }
     }
 
