@@ -3,36 +3,64 @@ package org.example;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.geometry.HPos;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import lombok.Getter;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
 
 public class MainSceneController{
 
     private List<Product> products;
 
+    @FXML
+    private Text circleText;
 
+    @Getter
+    @FXML
+    private Text personName;
 
     @FXML
     private BorderPane borderPane;
+
+    @FXML
+    private Pane informaticsPane;
+
+    @FXML
+    private Pane medicinePane;
+
+    @FXML
+    private Pane musicPane;
+
+    @FXML
+    private StackPane rootPane;
+
+    @FXML
+    private Button loginB;
+
+    @FXML
+    private Button SignUpB;
+
+    @FXML
+    private Circle nameCircle;
+
+    private static Stage loginStage;
+
+    private static Stage AccountStage;
+
+    private String letter = "";
 
     @FXML
     private Button InformaticsBTN;
@@ -45,16 +73,15 @@ public class MainSceneController{
     private Pane  Pane0,Pane1,Pane2,Pane3,Pane4,Pane5,Pane6;
 
 
+    public void setPersonName(String name) {
+        if (personName != null) {
+            personName.setText(name);
+        }
+    }
 
-
-
-
-    @FXML
-    private static Button SignUpB;
-
-    @FXML
-    private static Button loginB;
-
+    public String getSignUpButtonText() {
+        return SignUpB.getText();
+    }
 
 
     @FXML
@@ -62,7 +89,7 @@ public class MainSceneController{
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLoginScene.fxml"));
             Parent root = loader.load();
-            Stage loginStage = new Stage();
+            loginStage = new Stage();
             loginStage.setTitle("Login");
             loginStage.setScene(new Scene(root));
             loginStage.initModality(Modality.APPLICATION_MODAL);
@@ -73,36 +100,39 @@ public class MainSceneController{
             e.printStackTrace();
         }
     }
-
     @FXML
-    public static void switchButtonLogin()
+    public static void LoginSceneOff()
     {
-        loginB.setVisible(false);
-        SignUpB.setText("Log out");
+        if (loginStage != null) {
+            loginStage.close();
+        }
     }
-
-    @FXML
-    public static void switchButtonLogout()
-    {
-        loginB.setVisible(true);
-        SignUpB.setText("Sign Up");
-    }
-
     @FXML
     void SignupButton(ActionEvent event) {
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSignUpScene.fxml"));
-            Parent root = loader.load();
-            Stage loginStage = new Stage();
-            loginStage.setTitle("Sign Up");
-            loginStage.setScene(new Scene(root));
-            loginStage.initModality(Modality.APPLICATION_MODAL);
-            loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
-            loginStage.setResizable(false);
-            loginStage.showAndWait();
-        } catch (IOException e) {
-            e.printStackTrace();
+        String buttonText = getSignUpButtonText();
+        System.out.println("Current button text: " + buttonText);
+        if (getSignUpButtonText().equals("Sign Up")) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSignUpScene.fxml"));
+                Parent root = loader.load();
+                loginStage = new Stage();
+                loginStage.setTitle("Sign Up");
+                loginStage.setScene(new Scene(root));
+                loginStage.initModality(Modality.APPLICATION_MODAL);
+                loginStage.initOwner(((Stage) ((Node) event.getSource()).getScene().getWindow()));
+                loginStage.setResizable(false);
+                loginStage.showAndWait();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if (getSignUpButtonText().equals("Log Out"))
+        {
+            updateButtonsAfterLogout();
+            personName.setText("");
+            LoginSceneController.name = "";
+            LoginSceneController.password = "";
+            LoginSceneController.username = "";
         }
     }
 
@@ -196,6 +226,29 @@ public class MainSceneController{
     public static void setPanesVisibility(boolean visibility, Pane... panes) {
         for (Pane pane : panes) {
             pane.setVisible(visibility);
+        }
+    }
+
+    public void updateButtonsAfterLogin() {
+        loginB.setVisible(false);
+        SignUpB.setText("Log Out");
+    }
+
+    public void updateButtonsAfterLogout() {
+        loginB.setVisible(true);
+        SignUpB.setText("Sign Up");
+    }
+
+    public Text getPersonName() {
+        return personName;
+    }
+
+    @FXML
+    public static void PersonalSceneOff()
+    {
+        if(AccountStage != null)
+        {
+            AccountStage.close();
         }
     }
 }
