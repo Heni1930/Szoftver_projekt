@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainSceneController{
 
-    private List<Product> products;
+    public static List<Product> products;
 
     @FXML
     private Text circleText;
@@ -59,6 +59,11 @@ public class MainSceneController{
     private Button MedicineBTN;
     @FXML
     private Button musicBTN;
+
+    @FXML
+    private RentSceneController rentSceneController;
+
+    public static String rid;
 
     @FXML
     private Pane  Pane0,Pane1,Pane2,Pane3,Pane4,Pane5,Pane6;
@@ -128,22 +133,28 @@ public class MainSceneController{
     }
 
     public void rentButton(ActionEvent actionEvent) {
-        try {
-            Object c = actionEvent.getSource();
-            System.out.println(c);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLRentScene.fxml"));
-            Parent root = loader.load();
-            Stage loginStage = new Stage();
-            loginStage.setTitle("Rental");
-            loginStage.setScene(new Scene(root));
-            loginStage.initModality(Modality.APPLICATION_MODAL);
-            loginStage.initOwner(((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()));
-            loginStage.setResizable(false);
-            loginStage.showAndWait();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            try {
+                Button c = (Button) actionEvent.getSource();
+                String rid = c.getId();
+                System.out.println("Button ID: " + rid);
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLRentScene.fxml"));
+                Parent root = loader.load();
+                RentSceneController rentSceneController = loader.getController();
+                rentSceneController.desc(rid);
+                rentSceneController.quantity(rid);
+                Stage loginStage = new Stage();
+                loginStage.setTitle("Rental");
+                loginStage.setScene(new Scene(root));
+                loginStage.initModality(Modality.APPLICATION_MODAL);
+                loginStage.initOwner(((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()));
+                loginStage.setResizable(false);
+                loginStage.showAndWait();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
     }
+
 
     @FXML
     void switchToInf(ActionEvent event) {
