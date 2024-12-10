@@ -7,6 +7,7 @@ module org.example {
     requires org.hibernate.orm.core;
     requires java.desktop;
     requires static lombok;
+    requires jakarta.validation;
 
     opens org.example to javafx.fxml, org.hibernate.orm.core;
     exports org.example;

@@ -8,5 +8,4 @@ public interface ProductDAO {
     public Product findProductById(int id);
     public void update(Product product);
     public void delete(Product product);
-
 }

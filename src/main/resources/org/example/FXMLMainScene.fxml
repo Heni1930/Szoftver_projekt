@@ -19,7 +19,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="816.0" prefWidth="1269.0" style="-fx-background-color: F1F1F1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainSceneController">
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="916.0" prefWidth="1269.0" style="-fx-background-color: F1F1F1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainSceneController">
    <children>
       <Pane layoutX="-3.0" layoutY="-6.0" prefHeight="74.0" prefWidth="1277.0" style="-fx-background-color: #353535;">
          <children>
@@ -33,7 +34,7 @@
                   <Font name="Yu Gothic UI Semibold" size="18.0" />
                </font>
             </Button>
-            <Text fill="WHITE" layoutX="107.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X University" wrappingWidth="174.373046875">
+            <Text fill="WHITE" layoutX="107.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X University" wrappingWidth="174.373046875" fx:id="xUniText">
                <font>
                   <Font name="Yu Gothic UI Semibold" size="24.0" />
                </font>
@@ -94,7 +95,7 @@
             <Font name="Yu Gothic UI Semibold" size="32.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#989fa686" height="66.0" layoutX="-6.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1187.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#989fa686" height="66.0" layoutX="-6.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1187.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="-6.0" />
       <TextField layoutX="1016.0" layoutY="230.0" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 50;" text="Search" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="230.0">
          <font>
             <Font name="System Italic" size="15.0" />
@@ -508,7 +509,7 @@
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </GridPane.margin>
                   </AnchorPane>
-                  <AnchorPane prefHeight="261.0" prefWidth="259.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="3">
+                  <AnchorPane prefHeight="261.0" prefWidth="259.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="2">
                      <children>
                         <ImageView fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
                            <image>
@@ -900,6 +901,2019 @@
                      </children>
                      <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="60.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane0" layoutY="300.0" prefHeight="531.0" prefWidth="1274.0" style="-fx-background-color: F1F1F1;">
+         <children>
+            <GridPane prefHeight="610.0" prefWidth="1274.0">
+               <children>
+                  <AnchorPane id="ap1" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap2" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap3" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="2"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap4" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="3"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap5" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap6" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                           <Image url="@../../../../../../../Downloads/raspberry%20pi.jpeg" />
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane1" layoutY="300.0" prefHeight="531.0" prefWidth="1274.0" style="-fx-background-color: F1F1F1;">
+         <children>
+            <GridPane prefHeight="610.0" prefWidth="1274.0">
+               <children>
+                  <AnchorPane id="ap1" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane2" layoutY="300.0" prefHeight="531.0" prefWidth="1274.0" style="-fx-background-color: F1F1F1;">
+         <children>
+            <GridPane prefHeight="610.0" prefWidth="1274.0">
+               <children>
+                  <AnchorPane id="ap1" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap2" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane3" layoutY="300.0" prefHeight="531.0" prefWidth="1274.0" style="-fx-background-color: F1F1F1;">
+         <children>
+            <GridPane prefHeight="610.0" prefWidth="1274.0">
+               <children>
+                  <AnchorPane id="ap1" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap2" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap3" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="2"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane4" layoutY="300.0" prefHeight="531.0" prefWidth="1274.0" style="-fx-background-color: F1F1F1;">
+         <children>
+            <GridPane prefHeight="610.0" prefWidth="1274.0">
+               <children>
+                  <AnchorPane id="ap1" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap2" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap3" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="2"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap4" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="3"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane5" layoutY="300.0" prefHeight="531.0" prefWidth="1274.0" style="-fx-background-color: F1F1F1;">
+         <children>
+            <GridPane prefHeight="610.0" prefWidth="1274.0">
+               <children>
+                  <AnchorPane id="ap1" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap2" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap3" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="2"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap4" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="3"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap5" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane6" layoutY="300.0" prefHeight="531.0" prefWidth="1274.0" style="-fx-background-color: F1F1F1;">
+         <children>
+            <GridPane prefHeight="610.0" prefWidth="1274.0">
+               <children>
+                  <AnchorPane id="ap1" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap2" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap3" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="2"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap4" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="3"  GridPane.rowIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap5" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="0"  GridPane.rowIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane id="ap6" prefHeight="260.0" prefWidth="247.0" style="-fx-background-radius: 20; -fx-background-color: white;" GridPane.columnIndex="1"  GridPane.rowIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView  id="imageView" fitHeight="179.0" fitWidth="223.0" layoutX="16.8" layoutY="5.0" pickOnBounds="true" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+
+                              <Image url="@../../../../../../../Downloads/raspberry%20pi.jpeg" />
+
+                        </ImageView>
+                        <Pane layoutX="1.0" layoutY="177.0" prefHeight="83.0" prefWidth="260.0" style="-fx-background-color: lightgray; -fx-background-radius: 20;">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="-3.0" prefHeight="83.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.60000610351562" minWidth="10.0" prefWidth="134.39999389648438" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.20001220703125" minWidth="10.0" prefWidth="121.60000610351562" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button  id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Label id="itemNameLabel" text="Stethoscope" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="/" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Renting time:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="itemQLabel" text="12" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets left="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="4 weeks" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="24" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="39.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </GridPane.margin>
                   </AnchorPane>
                </children>

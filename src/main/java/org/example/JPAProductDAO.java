@@ -5,8 +5,8 @@ import javax.persistence.*;
 import java.util.List;
 
 public class JPAProductDAO implements ProductDAO {
-    final EntityManagerFactory emf = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
-    final EntityManager em = emf.createEntityManager();
+    static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
+    static final EntityManager em = emf.createEntityManager();
 
     @Override
     public void save(Product product) {
@@ -46,5 +46,18 @@ public class JPAProductDAO implements ProductDAO {
         em.getTransaction().begin();
         em.remove(product);
         em.getTransaction().commit();
+    }
+
+
+    public static List<Product> findProductsByFaculty(Faculties faculty) {
+        try {
+            String query = "SELECT p FROM Product p WHERE p.faculty = :faculty";
+            TypedQuery<Product> typedQuery = em.createQuery(query, Product.class);
+            typedQuery.setParameter("faculty", faculty);
+            return typedQuery.getResultList();
+        }
+        catch (NoResultException e) {
+            return null;
+        }
     }
 }
