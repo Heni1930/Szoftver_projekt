@@ -930,7 +930,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1002,7 +1002,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1074,7 +1074,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1147,7 +1147,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1220,7 +1220,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="5" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1295,7 +1295,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="6" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1385,7 +1385,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1471,7 +1471,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1543,7 +1543,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1630,7 +1630,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1702,7 +1702,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1774,7 +1774,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1862,7 +1862,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -1934,7 +1934,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2006,7 +2006,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2079,7 +2079,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2168,7 +2168,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2240,7 +2240,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2312,7 +2312,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2385,7 +2385,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2458,7 +2458,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="5" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2548,7 +2548,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2620,7 +2620,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2692,7 +2692,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2765,7 +2765,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="4" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2838,7 +2838,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="5" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
@@ -2913,7 +2913,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button id="Button" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="6" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#rentButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #1a3537;" text="Rent" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font name="System Bold" size="15.0" />
                                        </font>
