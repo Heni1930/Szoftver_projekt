@@ -26,20 +26,32 @@ public class AccountSceneController {
         }
     }
 
+    public void noLogin()
+    {
+        FirstLabel.setText("Please log in!");
+        SecondLabel.setText("");
+        ThirdLabel.setText("");
+
+    }
+
     @FXML
     public void PersonalData(ActionEvent actionEvent) {
+        if(LoginSceneController.username.equals("")){
+            noLogin();
+        }
     }
 
     @FXML
     public void showRentals(ActionEvent actionEvent) {
+        if(LoginSceneController.username.equals("")){
+            noLogin();
+        }
     }
 
     @FXML
     public void nameOfPerson(ActionEvent actionEvent) {
         if(LoginSceneController.username.equals("")){
-            FirstLabel.setText("Please log in!");
-            SecondLabel.setText("");
-            ThirdLabel.setText("");
+            noLogin();
         }
         else
         {
