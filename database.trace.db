@@ -53,6 +53,51 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
 	at com.h2database@1.4.199/org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
 	... 20 more
+2024-11-28 03:59:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+INSERT INTO users (id, username, password, name, email, faculty)
+VALUES 
+(5, 'berki_maria', 'berki123', 'Berki Mária', 'berki.maria@example.com', 0), 
+(6, 'szilagyi_kristof', 'szilagyi123', 'Szilágyi Kristóf', 'szilagyi.kristof@example.com', 1),
+(7, 'balogh_klara', 'klara456', 'Balogh Klára', 'balogh.klara@example.com', 2),  
+(8, 'farkas_david', 'farkas789', 'Farkas Dávid', 'farkas.david@example.com', 3),
+(9, 'horvath_lilla', 'lilla321', 'Horváth Lilla', 'horvath.lilla@example.com', 0),  
+(10, 'peter_gabor', 'gabesz2024', 'Péter Gábor', 'peter.gabor@example.com', 1) [42102-199]
+2024-11-28 04:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTS" not found; SQL statement:
+INSERT INTO products (id, name, description, price, quantity, faculty)
+VALUES 
+(1, 'Mikroszkóp', 'Kiváló minőségű labor mikroszkóp.', 150000.00, 10, 10),
+(2, 'Festőállvány', 'Képzőművészeti festőállvány.', 25000.00, 5, 2),
+(3, '3D nyomtató', 'Műszaki célú 3D nyomtató.', 200000.00, 3, 9),
+(4, 'Orvosi táska', 'Prémium orvosi felszerelés táska.', 30000.00, 15, 1),
+(5, 'Távcső', 'Csillagászati távcső, precíziós optika.', 120000.00, 7, 10),
+(6, 'Festőecset készlet', 'Művészeti festőecsetek professzionális készlete.', 8000.00, 12, 2),
+(7, 'Robotkar', 'Mérnöki robotkar, ipari használatra.', 400000.00, 2, 9),
+(8, 'Személyi védőfelszerelés', 'Orvosi védőfelszerelés, sebészeti maszkok és kesztyűk.', 5000.00, 30, 3),
+(9, 'Kémiai labor készlet', 'Kémiai laboratóriumi eszközök kezdő készlete.', 50000.00, 8, 10),
+(10, 'Képzőművészeti könyv', 'Képzőművészeti stílusok és technikák könyve.', 12000.00, 20, 2),
+(11, 'Fém 3D nyomtató filament', 'Fém 3D nyomtatóhoz való alapanyag.', 25000.00, 10, 9),
+(12, 'Orvosi mikroszkóp lencse', 'Orvosi mikroszkóp lencse különböző nagyítással.', 40000.00, 5, 1) [42102-199]
+2024-11-28 04:12:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO RENTAL (ID, PRODUCTID, CUSTOMERID, RENTALDATE, RETURNDATE)
+VALUES 
+(1, 1, 1, '2024-10-01', '2024-10-15'),
+(2, 2, 2, '2024-10-03', '2024-10-17'), [*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO rental (id, productid, customerid, rentaldate, returndate)
+VALUES 
+(1, 1, 1, '2024-10-01', '2024-10-15'),
+(2, 2, 2, '2024-10-03', '2024-10-17'), [42001-199]
 2024-11-25 17:35:12 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CUSTOMER" not found; SQL statement:
 select * from customer [42102-199]
+2024-12-10 08:13:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTS" not found; SQL statement:
+INSERT INTO products (id, name, description, price, quantity, faculty)
+VALUES 
+    (1, 'Product 1', 'Description 1', 100, 10, 1),
+    (2, 'Product 2', 'Description 2', 150, 15, 1),
+    (3, 'Product 3', 'Description 3', 200, 8, 1),
+    (4, 'Product 4', 'Description 4', 180, 12, 11),
+    (5, 'Product 5', 'Description 5', 220, 5, 11),
+    (6, 'Product 6', 'Description 6', 210, 10, 11) [42102-199]
