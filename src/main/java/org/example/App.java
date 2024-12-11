@@ -24,6 +24,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+
         primaryStage = stage;
         URL loginFxmlUrl = getClass().getResource("/org/example/FXMLMainScene.fxml");
         FXMLLoader loader = new FXMLLoader(loginFxmlUrl);
