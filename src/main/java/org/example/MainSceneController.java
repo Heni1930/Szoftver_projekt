@@ -26,7 +26,7 @@ import java.util.List;
 public class MainSceneController{
 
     public static List<Product> products;
-    public static String rid;
+    public static String rid = "-1";
 
     @FXML
     private Text circleText;
@@ -147,7 +147,7 @@ public class MainSceneController{
     public void rentButton(ActionEvent actionEvent) {
             try {
                 Button c = (Button) actionEvent.getSource();
-                rid = c.getId();
+                rid = String.valueOf((Integer.parseInt(rid) + Integer.parseInt(c.getId())));
                 System.out.println("Button ID: " + rid);
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLRentScene.fxml"));
                 Parent root = loader.load();
@@ -162,6 +162,7 @@ public class MainSceneController{
                 RentStage.initOwner(((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()));
                 RentStage.setResizable(false);
                 RentStage.showAndWait();
+                rid = "-1";
             } catch (IOException e) {
                 e.printStackTrace();
             }
