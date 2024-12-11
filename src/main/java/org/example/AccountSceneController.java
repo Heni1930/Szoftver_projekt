@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.stage.Modality;
@@ -28,6 +29,9 @@ public class AccountSceneController {
 
     @FXML
     public Button SignUpOrInB;
+
+    @FXML
+    public ImageView persImage;
 
     public void initialize() {
         if(LoginSceneController.username.equals("")){
@@ -109,7 +113,8 @@ public class AccountSceneController {
         }
         else
         {
-            //FirstLabel.setText(JPARentalDAO.findProductNamesByUsername(LoginSceneController.username).toString());
+            //persImage.
+            FirstLabel.setText(JPARentalDAO.findProductNamesByUsername(LoginSceneController.username).toString());
             SecondLabel.setText("Date to return product:");
             ThirdLabel.setText("2024/12/12");
         }

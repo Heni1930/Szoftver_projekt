@@ -53,7 +53,7 @@ public class JPARentalDAO implements RentalDAO {
 
     }
 
-   /* public static Date findProductDatesByUsername(String username) {
+   /*public static Date findProductDatesByUsername(String username) {
         try {
             TypedQuery<Integer> customerQuery = em.createQuery("SELECT c.id FROM Customer c WHERE c.username = :username", Integer.class);
             customerQuery.setParameter("username", username);
