@@ -42,6 +42,7 @@ public class AccountSceneController {
         }
         else
         {
+            persImage.setImage(null);
             FirstLabel.setText("Name: " + LoginSceneController.name);
             //SecondLabel.setText("Faculity: " + JPACustomerDAO.);
             SecondLabel.setText("");
@@ -88,6 +89,7 @@ public class AccountSceneController {
 
     public void noLogin()
     {
+        persImage.setImage(null);
         FirstLabel.setText("Please log in!");
         SecondLabel.setText("");
         ThirdLabel.setText("");
@@ -101,6 +103,7 @@ public class AccountSceneController {
         }
         else
         {
+            persImage.setImage(null);
             FirstLabel.setText("Email: " + JPACustomerDAO.findEmailByUsername(LoginSceneController.username));
             //SecondLabel.setText("Faculity: " + JPACustomerDAO.);
             SecondLabel.setText("");
@@ -115,6 +118,7 @@ public class AccountSceneController {
         }
         else if(JPARentalDAO.isRentalExist(LoginSceneController.username).equals("Not Exist"))
         {
+            persImage.setImage(null);
             FirstLabel.setText("You don't have any rental yet");
             SecondLabel.setText("");
             ThirdLabel.setText("");
@@ -140,6 +144,7 @@ public class AccountSceneController {
         }
         else
         {
+            persImage.setImage(null);
             FirstLabel.setText("Name: " + LoginSceneController.name);
             SecondLabel.setText("");
             ThirdLabel.setText("");
