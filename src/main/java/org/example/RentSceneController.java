@@ -24,7 +24,7 @@ import java.util.List;
 @Getter
 public class RentSceneController {
 
-    int ButtonID = Integer.parseInt(MainSceneController.rid);
+    int ButtonID = Integer.parseInt(MainSceneController.rid)-1;
     Product pro = MainSceneController.products.get(ButtonID);
     @FXML
     private Label date;
@@ -71,7 +71,7 @@ public class RentSceneController {
         setDate("" + futureDate);
     }
 
-    public Date getFormattedDate()
+    public static Date getFormattedDate()
     {
         // Aktuális dátum és idő lekérése
         LocalDateTime now = LocalDateTime.now();
@@ -137,6 +137,8 @@ public class RentSceneController {
 
 
             RentalUtils.SaveRental(rental);
+
+            product.setQuantity(product.getQuantity()-1);
 
             MainSceneController.RentSceneOff();
         }

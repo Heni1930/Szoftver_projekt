@@ -8,13 +8,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Circle;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class AccountSceneController {
 
@@ -111,12 +113,22 @@ public class AccountSceneController {
         if(LoginSceneController.username.equals("")){
             noLogin();
         }
+        else if(JPARentalDAO.isRentalExist(LoginSceneController.username).equals("Not Exist"))
+        {
+            FirstLabel.setText("You don't have any rental yet");
+            SecondLabel.setText("");
+            ThirdLabel.setText("");
+        }
         else
         {
-            //persImage.
-            FirstLabel.setText(JPARentalDAO.findProductNamesByUsername(LoginSceneController.username).toString());
+            FirstLabel.setText(JPARentalDAO.findProduct(LoginSceneController.username));
             SecondLabel.setText("Date to return product:");
-            ThirdLabel.setText("2024/12/12");
+            String[] Date = JPARentalDAO.findDate().toString().split(" ");
+            ThirdLabel.setText(Date[0]);
+            String picURL = MainSceneController.getPic(FirstLabel.getText());
+            System.out.println(FirstLabel.getText());
+            Image image = new Image(picURL);
+            persImage.setImage(image);
         }
 
     }
