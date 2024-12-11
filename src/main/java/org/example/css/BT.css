@@ -1,0 +1,20 @@
+.button:hover
+{
+    -fx-background-color: #353535 ;
+    -fx-text-fill:  white;
+}
+
+.loginButton:hover
+{
+
+}
+
+.signUpButton:hover
+{
+
+}
+
+.rentButton:hover
+{
+
+}
