@@ -1,6 +1,6 @@
 # Egyetemi Eszközbérlő Asztali Alkalmazás
 
-Ez a projekt egy **asztali alkalmazás**, amelyet az egyetemi szoftverfejlesztési mérnöki órák keretében készítettünk. Az alkalmazás célja, hogy megkönnyítse az egyetemi hallgatók számára különböző eszközök bérlését a hozzájuk tartozó karok szerint.
+Ez a projekt egy **asztali alkalmazás**, amelyet az egyetemi szoftverfejlesztési mérnöki óránk keretében készítettünk el. Az alkalmazás célja, hogy megkönnyítse az egyetemi hallgatók számára különböző eszközök bérlését a hozzájuk tartozó karok szerint.
 
 ---
 
