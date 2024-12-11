@@ -18,6 +18,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lombok.Getter;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -69,7 +70,7 @@ public class MainSceneController{
 
 
     @FXML
-    private Pane  Pane0,Pane1,Pane2,Pane3,Pane4,Pane5,Pane6;
+    private Pane  Pane0,Pane1,Pane2,Pane3,Pane4,Pane5,Pane6,Pane7,Pane8;
 
 
     public void setPersonName(String name) {
@@ -207,6 +208,7 @@ public class MainSceneController{
 
     private void populateProducts(Faculties faculty) {
         products = JPAProductDAO.findProductsByFaculty(faculty);
+        String picURL = "";
         int i = 0;
         Pane p = pane(products.size());
         GridPane gridPane = (GridPane) p.getChildren().get(0);
@@ -214,7 +216,8 @@ public class MainSceneController{
         for (Product product : products) {
             Node ap = gridPane.getChildren().get(i);
             ImageView imageView = (ImageView) ap.lookup("#imageView");
-            Image image = new Image("file:src/main/java/org/example/img/kacsa.png");
+            picURL = getPic(product.getName());
+            Image image = new Image(picURL);
             imageView.setImage(image);
             Label itemNameLabel = (Label) ap.lookup("#itemNameLabel");
             Label itemQLabel = (Label) ap.lookup("#itemQLabel");
@@ -225,8 +228,25 @@ public class MainSceneController{
             itemQLabel.setText(String.valueOf(product.getQuantity()));
             i++;
         }
-        setPanesVisibility(false,Pane0,Pane1,Pane2,Pane3,Pane4,Pane5,Pane6);
+        setPanesVisibility(false,Pane0,Pane1,Pane2,Pane3,Pane4,Pane5,Pane6,Pane7,Pane8);
         p.setVisible(true);
+    }
+
+    public String getPic(String name){
+        File directory = new File("src/main/java/org/example/img");
+        String e = "";
+
+        File[] files = directory.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                // Ha fájl, akkor megnézzük, hogy a fájl neve tartalmazza a keresett sztringet
+                if (file.isFile() && file.getName().toLowerCase().contains(name.toLowerCase())) {
+                    e = String.format("file:src/main/java/org/example/img/%s", file.getName());
+                    return e;
+                }
+            }
+        }
+        return "file:src/main/java/org/example/img/kacsa.png";
     }
 
     public Pane pane (int num){
@@ -237,6 +257,8 @@ public class MainSceneController{
             case 4: return Pane4;
             case 5: return Pane5;
             case 6: return Pane6;
+            case 7: return Pane7;
+            case 8: return Pane8;
             default: return Pane0;
         }
     }
