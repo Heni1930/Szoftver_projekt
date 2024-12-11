@@ -116,7 +116,7 @@
       </Pane>
       <Pane layoutX="228.0" layoutY="230.0" prefHeight="115.0" prefWidth="942.0" style="-fx-background-color: white; -fx-background-radius: 10;">
          <children>
-            <ImageView fx:id="persImage" fitHeight="115.0" fitWidth="128.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+            <ImageView fx:id="persImage" fitHeight="102.0" fitWidth="128.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                <image>
                   <Image url="@../../../../../../../Downloads/raspberry%20pi.jpeg" />
                </image>
