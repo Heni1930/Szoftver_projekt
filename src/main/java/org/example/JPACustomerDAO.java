@@ -9,6 +9,15 @@ public class JPACustomerDAO implements CustomerDAO {
     static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
     static final EntityManager em = emf.createEntityManager();
 
+    public static Customer mergeCustomer(Customer customer) {
+        if (customer.getId() != 0) {
+            em.persist(customer);
+            return customer;
+        }
+        else
+            return em.merge(customer);
+    }
+
     @Override
     public void save(Customer customer) {
         em.getTransaction().begin();

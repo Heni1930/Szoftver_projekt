@@ -26,6 +26,7 @@ public class LoginSceneController {
     public static String username = "";
     public static String password = "";
     public static String name = "";
+    public static Long UserID;
 
     public void login(ActionEvent actionEvent) {
         username = LoginUsernamefield.getText();
@@ -37,6 +38,7 @@ public class LoginSceneController {
 
             MainSceneController.LoginSceneOff();
             name = customer.getName();
+            UserID = customer.getId();
 
             try {
                 App.changeScene("FXMLMainScene");

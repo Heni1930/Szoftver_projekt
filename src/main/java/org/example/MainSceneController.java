@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -24,6 +25,7 @@ import java.util.List;
 public class MainSceneController{
 
     public static List<Product> products;
+    public static String rid;
 
     @FXML
     private Text circleText;
@@ -65,7 +67,6 @@ public class MainSceneController{
     @FXML
     private RentSceneController rentSceneController;
 
-    public static String rid;
 
     @FXML
     private Pane  Pane0,Pane1,Pane2,Pane3,Pane4,Pane5,Pane6;
@@ -145,14 +146,14 @@ public class MainSceneController{
     public void rentButton(ActionEvent actionEvent) {
             try {
                 Button c = (Button) actionEvent.getSource();
-                String rid = c.getId();
+                rid = c.getId();
                 System.out.println("Button ID: " + rid);
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLRentScene.fxml"));
                 Parent root = loader.load();
                 RentSceneController rentSceneController = loader.getController();
-                rentSceneController.desc(rid);
-                rentSceneController.quantity(rid);
-                rentSceneController.dateSet(rid);
+                rentSceneController.desc();
+                rentSceneController.quantity();
+                rentSceneController.dateSet();
                 RentStage = new Stage();
                 RentStage.setTitle("Rental");
                 RentStage.setScene(new Scene(root));
@@ -213,6 +214,8 @@ public class MainSceneController{
         for (Product product : products) {
             Node ap = gridPane.getChildren().get(i);
             ImageView imageView = (ImageView) ap.lookup("#imageView");
+            Image image = new Image("file:src/main/java/org/example/img/kacsa.png");
+            imageView.setImage(image);
             Label itemNameLabel = (Label) ap.lookup("#itemNameLabel");
             Label itemQLabel = (Label) ap.lookup("#itemQLabel");
             itemNameLabel.setText(product.getName());

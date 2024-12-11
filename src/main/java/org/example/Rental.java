@@ -28,12 +28,12 @@ public class Rental {
     @NotNull(message = "User ID cannot be null!")
     @ManyToOne
     @JoinColumn(name = "CustomerID")
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @Cascade(org.hibernate.annotations.CascadeType.MERGE)
     private Customer customerId;
     @NotNull(message = "product ID cannot be null!")
     @ManyToOne
     @JoinColumn(name = "productID")
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @Cascade(org.hibernate.annotations.CascadeType.MERGE)
     private Product productId;
     @NotNull(message = "Rental date cannot be null!")
     @FutureOrPresent
@@ -44,6 +44,10 @@ public class Rental {
     private Date returnDate;
 
 
-
-
+    public Rental(Customer customerId, Product productId, Date rentalDate, Date returnDate) {
+        this.customerId = customerId;
+        this.productId = productId;
+        this.rentalDate = rentalDate;
+        this.returnDate = returnDate;
+    }
 }

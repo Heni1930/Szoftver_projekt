@@ -6,7 +6,17 @@ import java.util.List;
 
 public class JPAProductDAO implements ProductDAO {
     static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
+    @PersistenceContext
     static final EntityManager em = emf.createEntityManager();
+
+    public static Product mergeProduct(Product product) {
+        if (product.getId() != 0) {
+            em.persist(product);
+            return product;
+        }
+        else
+            return em.merge(product);
+    }
 
     @Override
     public void save(Product product) {
@@ -57,6 +67,16 @@ public class JPAProductDAO implements ProductDAO {
             return typedQuery.getResultList();
         }
         catch (NoResultException e) {
+            return null;
+        }
+    }
+    public static Product fProductById(long id) {
+        TypedQuery<Product> query = em.createQuery("SELECT p FROM Product p WHERE p.id = :id", Product.class);
+        query.setParameter("id", id);
+        try{
+            return query.getSingleResult();
+        }
+        catch(NoResultException e){
             return null;
         }
     }
